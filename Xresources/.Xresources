@@ -1,0 +1,25 @@
+#if __has_include(".Xresources.color")
+#include ".Xresources.color"
+#endif
+
+#if __has_include(".Xresources.rofi")
+#include ".Xresources.rofi"
+#endif
+
+#if __has_include(".Xresources.terminal")
+#include ".Xresources.terminal"
+#endif
+
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+XTerm*background: #2b2b2b
+XTerm*foreground: #e7e7e7
+XTerm*pointerColor: #16A085
+XTerm*faceName: Fixed
+XTerm*faceSize: 11
