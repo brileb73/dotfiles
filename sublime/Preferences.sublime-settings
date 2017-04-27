@@ -1,0 +1,17 @@
+// -------------------------------------------------
+// Sublime User Preferences File
+// 
+// Author: Brian LeBlanc
+// -------------------------------------------------
+
+{
+	"color_scheme": "Packages/Color Scheme - Default/Twilight.tmTheme",
+	"tab_size": 4,
+	"translate_tabs_to_spaces": true,
+	"use_tab_stops": true,
+	"trim_automatic_white_space": true,
+    "highlight_line": true,
+    "trim_trailing_white_space_on_save": true,
+    "highlight_modified_tabs": true,
+    "ignored_packages": []
+}
