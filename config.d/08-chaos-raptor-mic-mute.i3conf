@@ -1,0 +1,2 @@
+# Mic mute toggle button
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute 1 toggle
