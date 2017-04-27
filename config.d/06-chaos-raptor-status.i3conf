@@ -1,0 +1,7 @@
+# Running polybar as status bar
+
+bar {
+    font pango:Hack 10
+    position top
+    i3bar_command ~/.config/polybar/launch.sh
+}

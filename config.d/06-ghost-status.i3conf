@@ -4,3 +4,5 @@ bar {
     status_command i3status -c ~/.config/i3/i3status.conf
     tray_output primary
 }
+
+bindsym $mod+m bar mode toggle
