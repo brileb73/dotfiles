@@ -1,0 +1,260 @@
+[colors]
+;background = #5131313
+background = #F2282C34
+;background-alt = #BB2f343f
+background-alt = #BB2f343f
+foreground = #D0D0D0
+foreground-alt = #f3f4f5
+foreground-dim = #858b97
+primary = #AAffb52a
+secondary = #e60053
+alert = #ff6600
+ 
+high = #A6F775
+high-alt = #A6F775
+ 
+[bar/top]
+fixed-center = true
+width = 100%
+height = 24
+background = ${colors.background}
+foreground = ${colors.foreground}
+font-0 = Hack:size=9
+font-1 = MaterialIcons:size=9;0
+font-2 = FontAwesome:size=9
+locale = en_US.UTF-8
+wm-name = i3
+tray-position = right
+tray-detached = false
+;wm-restack = i3
+; override-redirect = true
+overline-size = 2
+;overline-color = #f00
+underline-size = 2
+underline-color = #268bd2
+modules-left = cpu volume
+modules-center = i3
+modules-right = battery memory date
+spacing = 0
+lineheight = 16
+padding-right = 5
+padding-left = 5
+module-margin-left = 2
+module-margin-right = 2
+ 
+[global/wm]
+margin-bottom = 0
+ 
+[module/i3]
+type = internal/i3
+ws-icon-0 = 1:
+ws-icon-1 = 2:
+ws-icon-2 = 3:
+ws-icon-3 = 4:
+ws-icon-4 = 5:V
+ws-icon-5 = 6:VI
+ws-icon-6 = 7:
+ws-icon-7 = 8:
+ws-icon-8 = 9:IX
+ws-icon-9 = 10:X
+strip-wsnumbers = true
+format = <label-state> <label-mode>
+index-sort = true
+ 
+label-mode = %mode%
+label-mode-padding = 1
+label-mode-foreground = #FFFFFFFF
+label-mode-background = ${colors.primary}
+ 
+label-focused = %name%
+label-focused-background = ${colors.background-alt}
+label-focused-underline = ${colors.high}
+label-focused-padding = 1
+ 
+label-unfocused = %name%
+label-unfocused-foreground = ${colors.foreground-dim}
+label-unfocused-padding = 1
+ 
+label-urgent = %name%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 1
+ 
+label-visible = %name%
+label-visible-foreground = 1
+label-visible-padding = 1
+ 
+;[module/music]
+;type = custom/script
+;interval = 1
+; 
+;label = %output:0:45:...%
+;exec = ~/.config/polybar/mpris.sh
+; 
+;bar-progress-width = 45
+;bar-progress-format = %{A4:mpdseek+2: A5:mpdseek-2:}%fill%%indicator%%empty%%{A A}
+;bar-progress-indicator = |
+;bar-progress-indicator-foreground = #ff
+;bar-progress-indicator-font = 3
+;bar-progress-fill = ─
+;bar-progress-fill-foreground = #bb
+;bar-progress-fill-font = 3
+;bar-progress-empty = ─
+;bar-progress-empty-font = 3
+;bar-progress-empty-foreground = #44
+ 
+[module/date]
+type = internal/date
+interval = 1
+ 
+date = %%{F#999}%Y-%m-%d%%{F-}  %%{F#fff}%H:%M%%{F-}
+date-alt = " %d"
+ 
+time = "%H%{F#92}%M%{F-}%{F#49}%S%{F-}"
+time-alt =  %H:%M
+ 
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground}
+format-underline = #A6F775
+label = %date%
+ 
+[module/memory]
+type = internal/memory
+format = <label> <bar-used>
+label = RAM
+ 
+bar-used-width = 15
+bar-used-foreground-0 = #aaff77
+bar-used-foreground-1 = #aaff77
+bar-used-foreground-2 = #fba922
+bar-used-foreground-3 = #ff5555
+bar-used-indicator = |
+bar-used-indicator-font = 6
+bar-used-indicator-foreground = #ff
+bar-used-fill = ─
+bar-used-fill-font = 6
+bar-used-empty = ─
+bar-used-empty-font = 6
+bar-used-empty-foreground = #444444
+ 
+[module/volume]
+type = internal/volume
+ 
+format-volume = <label-volume> <bar-volume>
+label-volume = ""
+label-volume-foreground = ${colors.foreground}
+ 
+format-muted-prefix = " "
+format-muted-foreground = ${colors.foreground-alt}
+label-muted = muted
+ 
+bar-volume-width = 10
+bar-volume-foreground-0 = #A6F775
+bar-volume-foreground-1 = #A6F775
+bar-volume-foreground-2 = #A6F775
+bar-volume-foreground-3 = #A6F775
+bar-volume-foreground-4 = #A6F775
+bar-volume-foreground-5 = #f3f99d
+bar-volume-foreground-6 = #ff5c57
+bar-volume-gradient = false
+bar-volume-indicator = 
+bar-volume-indicator-font = 2
+bar-volume-indicator-foreground = #ff
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
+ 
+[module/clock]
+type = internal/date
+interval = 2
+date = %%{F#999}%Y-%m-%d%%{F-}  %%{F#fff}%H:%M%%{F-}
+ 
+[module/wired-network]
+type = internal/network
+interface = enp3s0
+interval = 3.0
+ 
+label-connected =    %{T3}%local_ip%%{T-}
+label-disconnected-foreground = #66
+ 
+[module/cpu]
+type = internal/cpu
+interval = 0.5
+format = <label> <ramp-coreload>
+label = CPU
+ 
+ramp-coreload-0 = ▁
+ramp-coreload-0-font = 2
+ramp-coreload-0-foreground = #aaff77
+ramp-coreload-1 = ▂
+ramp-coreload-1-font = 2
+ramp-coreload-1-foreground = #aaff77
+ramp-coreload-2 = ▃
+ramp-coreload-2-font = 2
+ramp-coreload-2-foreground = #aaff77
+ramp-coreload-3 = ▄
+ramp-coreload-3-font = 2
+ramp-coreload-3-foreground = #aaff77
+ramp-coreload-4 = ▅
+ramp-coreload-4-font = 2
+ramp-coreload-4-foreground = #fba922
+ramp-coreload-5 = ▆
+ramp-coreload-5-font = 2
+ramp-coreload-5-foreground = #fba922
+ramp-coreload-6 = ▇
+ramp-coreload-6-font = 2
+ramp-coreload-6-foreground = #ff5555
+ramp-coreload-7 = █
+ramp-coreload-7-font = 2
+ramp-coreload-7-foreground = #ff5555
+ 
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 98
+time-format = "%H%{F#92}%M%{F-}"
+ 
+label-discharging = %percentage% %time%
+ 
+format-charging = <animation-charging> <label-charging>
+format-charging-underline = #f3f99d
+ 
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-underline = ${self.format-charging-underline}
+ 
+format-full-prefix = " "
+format-full-prefix-foreground = ${colors.foreground-alt}
+format-full-underline = ${self.format-charging-underline}
+ 
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-foreground = ${colors.foreground-alt}
+ 
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-foreground = ${colors.foreground-alt}
+animation-charging-framerate = 750
+ 
+[module/networkspeedup]
+type = internal/network
+interface = enp3s0
+label-connected = "%upspeed:7%"
+format-connected = <label-connected>
+format-connected-prefix = " "
+format-connected-prefix-foreground = #5b
+ 
+[module/networkspeeddown]
+type = internal/network
+interface = enp3s0
+label-connected = "%downspeed:7%"
+format-connected = <label-connected>
+format-connected-prefix = " "
+format-connected-prefix-foreground = #5b
