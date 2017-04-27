@@ -1,0 +1,4 @@
+# i3-gaps
+gaps inner 5
+gaps outer 0
+smart_gaps on

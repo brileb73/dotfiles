@@ -1,0 +1,3 @@
+# Laptop startup commands
+exec --no-startup-id tlp start
+#exec --no-startup-id powertop --auto-tune

@@ -1,5 +1,10 @@
 # Titlebars
-for_window [class="Firefox"] border pixel 1
-for_window [class="Google-chrome"] border pixel 1
-for_window [class="Chromium"] border pixel 1
-for_window [class="Atom"] border pixel 1
+#for_window [class="Firefox"] border pixel 1
+#for_window [class="Google-chrome"] border pixel 1
+#for_window [class="Chromium"] border pixel 1
+#for_window [class="Atom"] border pixel 1
+for_window [class=".*term.*"] border pixel 10
+
+# Borders
+for_window [tiling] border pixel 2
+for_window [class=".*"] title_format " > %title"
