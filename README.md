@@ -5,10 +5,10 @@ Repo for all my stupid dotfiles
 Different things contained in this repo:
 
 * i3cfgbuild files
-* .Xresources files
+* Xresources files
 * dunstrc
 * polybar files
-* bashrc and associated files
+* shell rc and associated files (bashrc/zshrc)
 * vimrc
 
 ## i3cfgbuild
