@@ -49,10 +49,10 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-modules-right = filesystem separator  cpu separator memory separator battery separator xbacklight separator volume separator date separator powermenu
-;modules-center = i3 
+modules-right = battery separator xbacklight separator volume separator date separator powermenu
+modules-center = i3 
 ;modules-left = spotify
-modules-left = i3
+modules-left = cpu_bars separator memory separator filesystem
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -76,6 +76,38 @@ font-1 = "FontAwesome:size=8;2"
 ;type = custom/script
 ;exec = ~/.config/polybar/spotify.sh
 ;interval = 2
+
+[module/cpu_bars]
+type = internal/cpu
+interval = 0.5
+format = <label> <ramp-coreload>
+label = CPU
+format-padding = 1
+ 
+ramp-coreload-0 = ▁
+ramp-coreload-0-font = 2
+ramp-coreload-0-foreground = #aaff77
+ramp-coreload-1 = ▂
+ramp-coreload-1-font = 2
+ramp-coreload-1-foreground = #aaff77
+ramp-coreload-2 = ▃
+ramp-coreload-2-font = 2
+ramp-coreload-2-foreground = #aaff77
+ramp-coreload-3 = ▄
+ramp-coreload-3-font = 2
+ramp-coreload-3-foreground = #aaff77
+ramp-coreload-4 = ▅
+ramp-coreload-4-font = 2
+ramp-coreload-4-foreground = #fba922
+ramp-coreload-5 = ▆
+ramp-coreload-5-font = 2
+ramp-coreload-5-foreground = #fba922
+ramp-coreload-6 = ▇
+ramp-coreload-6-font = 2
+ramp-coreload-6-foreground = #ff5555
+ramp-coreload-7 = █
+ramp-coreload-7-font = 2
+ramp-coreload-7-foreground = #ff5555
 
 [module/i3]
 type = internal/i3
