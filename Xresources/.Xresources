@@ -1,13 +1,13 @@
-#if __has_include(".Xresources.color")
-#include ".Xresources.color"
+#if __has_include(".xres.color.Xresources")
+#include ".xres.color.Xresources"
 #endif
 
-#if __has_include(".Xresources.rofi")
-#include ".Xresources.rofi"
+#if __has_include(".xres.rofi.Xresources")
+#include ".xres.rofi.Xresources"
 #endif
 
-#if __has_include(".Xresources.terminal")
-#include ".Xresources.terminal"
+#if __has_include(".xres.terminal.Xresources")
+#include ".xres.terminal.Xresources"
 #endif
 
 Xft.dpi: 96
