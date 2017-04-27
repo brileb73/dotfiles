@@ -1,0 +1,8 @@
+// ----------------------------------
+// Sublime User Keymap
+//
+// Author: Brian LeBlanc
+// ----------------------------------
+[
+    { "keys": ["ctrl+shift+o"], "command": "prompt_open_folder" }
+]
