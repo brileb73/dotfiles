@@ -9,13 +9,13 @@ alias ls='ls --color=auto'
 #PS1='[\u@\h \W]\$ '
 
 # Aliases
-if [ -f ~/.bash_aliases ]; then
-    source ~/.bash_aliases
+if [ -f $HOME/.bash_aliases ]; then
+    source $HOME/.bash_aliases
 fi
 
 # SSH key login nagger
-if [ -f ~/.bash_nag ]; then
-    source ~/.bash_nag
+if [ -f $HOME/.bash_nag ]; then
+    source $HOME/.bash_nag
 fi
 
 # Bash Prompt

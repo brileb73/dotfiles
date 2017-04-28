@@ -4,6 +4,9 @@
 
 export VISUAL='vim'
 export EDITOR=$VISUAL
+alias ll='ls -l'
+alias la='ls -la'
+alias l='ls -lah'
 alias get-ips='/home/bleblanc/repo/brians-stupid-scripts/get-ips.py'
 alias cdd='cd ~/Downloads'
 alias ..='cd ..'
@@ -20,13 +23,13 @@ alias shit='git push -u'
 export NVM_DIR='/home/bleblanc/.nvm'
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # Load the fkn thing
  
-aws() {
-  if [ "$1" == "cloudformation" ]; then
-    cfnwatcher ${@:2}
-  else
-    aws $@
-  fi
-}
+#aws() {
+#  if [[ "$1" == "cloudformation" ]]; then
+#    cfnwatcher ${@:2}
+#  else
+#    aws $@
+#  fi
+#}
  
 extract () {
   if [ -f $1 ] ; then
