@@ -15,9 +15,7 @@ unsetopt beep
 bindkey -e
 # End of lines configured by zsh-newuser-install
 
-export EDITOR=/usr/bin/vim
-export VISUAL=$EDITOR
-
+# Update path
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to oh-my-zsh installation
