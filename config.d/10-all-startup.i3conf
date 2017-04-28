@@ -1,5 +1,6 @@
 # Things to execute on start
 exec --no-startup-id nm-applet
 exec --no-startup-id dunst
+exec --no-startup-id emacs --daemon
 
-exec numlockx
+exec --no-startup-id numlockx
