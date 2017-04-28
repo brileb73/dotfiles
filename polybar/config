@@ -1,5 +1,3 @@
-;:set syn=dosini
-
 [global/wm]
 #margin-top = 8
 #margin-bottom = 8
@@ -52,7 +50,7 @@ module-margin-right = 0
 modules-right = battery separator xbacklight separator volume separator date separator powermenu
 modules-center = i3 
 ;modules-left = spotify
-modules-left = cpu_bars separator memory separator filesystem
+modules-left = cpu_bars separator memory separator filesystem separator wlan
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -115,7 +113,10 @@ format = <label-state> <label-mode>
 index-sort = false
 wrapping-scroll = false
 
-#label-focused = %icon%
+; Only show workspaces on the same output as the bar
+pin-workspaces = true
+
+;label-focused = %icon%
 ;label-focused-font = 1
 label-focused-background = ${colors.background-alt}
 ;label-focused-underline= ${colors.primary}
@@ -138,6 +139,49 @@ label-urgent-padding = 2
 label-empty = %icon%
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
+
+[module/wlan]
+type = internal/network
+interface = wlp3s0
+interval = 3.0
+
+format-connected = <ramp-signal> <label-connected>
+format-connected-padding = 1
+;format-connected-underline = #9fe178
+label-connected = %essid%
+
+format-disconnected = <label-disconnected>
+format-disconnected-padding = 1
+;format-disconnected-underline = ${self.format-connected-underline}
+label-disconnected = wifi disconnected
+label-disconnected-foreground = ${colors.foreground-alt}
+
+ramp-signal-0 = ▁
+ramp-signal-0-font = 2
+ramp-signal-0-foreground = #ff5555
+ramp-signal-1 = ▂
+ramp-signal-1-font = 2
+ramp-signal-1-foreground = #ff5555
+ramp-signal-2 = ▃
+ramp-signal-2-font = 2
+ramp-signal-2-foreground = #fba922
+ramp-signal-3 = ▄
+ramp-signal-3-font = 2
+ramp-signal-3-foreground = #fba922
+ramp-signal-4 = ▅
+ramp-signal-4-font = 2
+ramp-signal-4-foreground = #aaff77
+ramp-signal-5 = ▆
+ramp-signal-5-font = 2
+ramp-signal-5-foreground = #aaff77
+ramp-signal-6 = ▇
+ramp-signal-6-font = 2
+ramp-signal-6-foreground = #aaff77
+ramp-signal-7 = █
+ramp-signal-7-font = 2
+ramp-signal-7-foreground = #aaff77
+
+;ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/xbacklight]
 type = internal/xbacklight
