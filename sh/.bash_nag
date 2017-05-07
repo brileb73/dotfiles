@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
-    ssh-agent > ~/.ssh-agent-output
+    ssh-agent > ~/.output-ssh-agent
 fi
 if [[ "$SSH_AGENT_PID" == "" ]]; then
-    eval "$(<~/.ssh-agent-output)" > /dev/null
+    eval "$(<~/.output-ssh-agent)" > /dev/null
 fi
 
 if [[ $(ssh-add -l | grep ".ssh/id_rsa" | wc -l) == 0 ]]; then
