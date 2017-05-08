@@ -25,3 +25,6 @@ The .zshrc file in sh uses oh-my-zsh and will most likely cause errors if oh-my-
 ## vimrc
 The included vimrc uses pathogen and will probably not work if pathogen is not installed. More information [here](vim/README.md).
 
+## GTK Theme
+Using flatplat theme, installed from yaourt as `flatplat-theme`.
+
