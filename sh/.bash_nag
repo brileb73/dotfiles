@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
+
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
     ssh-agent > ~/.output-ssh-agent
 fi
+
 if [[ "$SSH_AGENT_PID" == "" ]]; then
     eval "$(<~/.output-ssh-agent)" > /dev/null
 fi

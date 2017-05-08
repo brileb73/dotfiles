@@ -54,3 +54,7 @@ extract () {
   fi
 }
 
+awscache() {
+    eval `$HOME/repo/brians-stupid-scripts/awscache $@`
+}
+

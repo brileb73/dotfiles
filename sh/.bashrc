@@ -8,15 +8,16 @@
 alias ls='ls --color=auto'
 #PS1='[\u@\h \W]\$ '
 
+# Source if file exists
+source_exist() {
+    [[ -f $1 ]] && source $1
+}
+
 # Aliases
-if [ -f $HOME/.bash_aliases ]; then
-    source $HOME/.bash_aliases
-fi
+source_exist $HOME/.bash_aliases
 
 # SSH key login nagger
-if [ -f $HOME/.bash_nag ]; then
-    source $HOME/.bash_nag
-fi
+source_exist $HOME/.bash_nag
 
 # Bash Prompt
 function get_host() {

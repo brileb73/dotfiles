@@ -76,20 +76,19 @@ export ARCHFLAGS="-arch x86_64"
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+# Function for source'ing files if exist
+source_exist() {
+    [[ -f $1 ]] && source $1
+}
+
 # Set prompt from promptline script
-if [ -f $HOME/.promptline ]; then
-    source $HOME/.promptline
-fi
+source_exist $HOME/.promptline
 
 # Grab bash aliases
-if [ -f $HOME/.bash_aliases ]; then
-    source $HOME/.bash_aliases
-fi
+source_exist $HOME/.bash_aliases
 
 # SSH key login nagger
-if [ -f $HOME/.bash_nag ]; then
-    source $HOME/.bash_nag
-fi
+source_exist $HOME/.bash_nag
 
 # Add RVM to PATH for scripting
 #export PATH="$PATH:$HOME/.rvm/bin"
