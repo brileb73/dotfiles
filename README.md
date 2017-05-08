@@ -19,3 +19,9 @@ The i3cfgbuild files are the part config files used as input for i3cfgbuild from
 ## i3lock-blur
 The i3lock screen used is just symlinked from [this repo](https://github.com/brileb73/i3lock-blur) to /usr/local/bin/i3lock-blur
 
+## oh-my-zsh
+The .zshrc file in sh uses oh-my-zsh and will most likely cause errors if oh-my-zsh is not installed.
+
+## vimrc
+The included vimrc uses pathogen and will probably not work if pathogen is not installed. More information [here](vim/README.md).
+
