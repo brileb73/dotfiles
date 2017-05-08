@@ -20,3 +20,4 @@ mode $mode_system {
 bindsym $mod+Home mode $mode_system
 
 exec --no-startup-id xautolock -time 5 -locker $lock_screen
+exec --no-startup-id xss-lock -- $lock_screen
