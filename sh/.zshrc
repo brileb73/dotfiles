@@ -12,6 +12,7 @@ HISTFILE=~/.histfile
 HISTSIZE=5000
 SAVEHIST=5000
 unsetopt beep
+setopt autocd
 bindkey -e
 # End of lines configured by zsh-newuser-install
 
