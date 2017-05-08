@@ -22,7 +22,8 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH=/home/bleblanc/.oh-my-zsh
 
 # Set name of the theme to load, can also be "random"
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
+ZSH_THEME="gallois"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
