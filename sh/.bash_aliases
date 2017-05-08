@@ -55,6 +55,6 @@ extract () {
 }
 
 awscache() {
-    eval `$HOME/repo/brians-stupid-scripts/awscache $@`
+    eval `$HOME/repo/brians-stupid-scripts/awscache.py $@`
 }
 
