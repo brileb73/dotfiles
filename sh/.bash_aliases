@@ -8,7 +8,7 @@ alias ls='ls --color=auto'
 alias ll='ls -l'
 alias la='ls -la'
 alias l='ls -lah'
-alias get-ips='/home/bleblanc/repo/brians-stupid-scripts/get-ips.py'
+alias get-ips='$HOME/repo/brians-stupid-scripts/get-ips.py'
 alias cdd='cd ~/Downloads'
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -20,6 +20,7 @@ alias damn='git status'
 alias damnit='git add .'
 alias commit='git commit'
 alias shit='git push -u'
+alias emac='emacsclient -c'
  
 export NVM_DIR='/home/bleblanc/.nvm'
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # Load the fkn thing
@@ -55,6 +56,6 @@ extract () {
 }
 
 awscache() {
-    eval `$HOME/repo/brians-stupid-scripts/awscache.py $@`
+  eval `$HOME/repo/brians-stupid-scripts/awscache.py $@`
 }
 
