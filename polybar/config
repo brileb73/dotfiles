@@ -47,7 +47,7 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-modules-right = battery separator xbacklight separator volume separator date separator powermenu
+modules-right = xbacklight separator battery separator volume separator date separator powermenu
 modules-center = i3 
 ;modules-left = spotify
 modules-left = cpu_bars separator memory separator filesystem separator wlan
@@ -79,7 +79,7 @@ font-1 = "FontAwesome:size=8;2"
 type = internal/cpu
 interval = 0.5
 format = <label> <ramp-coreload>
-label = CPU
+label = 
 format-padding = 1
  
 ramp-coreload-0 = ▁
@@ -144,7 +144,7 @@ label-empty-padding = 2
 
 [module/wlan]
 type = internal/network
-interface = wlp3s0
+interface = wlp2s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
@@ -155,7 +155,7 @@ label-connected = %essid%
 format-disconnected = <label-disconnected>
 format-disconnected-padding = 1
 ;format-disconnected-underline = ${self.format-connected-underline}
-label-disconnected = wifi disconnected
+label-disconnected = 
 label-disconnected-foreground = ${colors.foreground-alt}
 
 ramp-signal-0 = ▁
@@ -207,7 +207,7 @@ type = internal/fs
 interval = 25
 
 mount-0 = /
-format-mounted-prefix = " "
+format-mounted-prefix = " "
 format-mounted-foreground = #928374
 label-mounted = %percentage_used%%
 label-mounted-foreground = ${root.foreground}
@@ -232,7 +232,7 @@ label-separator = |
 type = internal/volume
 
 format-volume = <label-volume> <bar-volume>
-label-volume = VOL
+label-volume = 
 label-volume-foreground = ${root.foreground}
 label-padding = 2
 
@@ -274,7 +274,7 @@ format-padding = 1
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = #928374
 ;format-underline = #4bffdc
 label = %percentage_used%%
@@ -294,12 +294,13 @@ time-format = %H:%M
 
 format-charging = <animation-charging> <label-charging>
 label-charging = %percentage%% 
+label-plugged-in = 
 
 format-discharging = <ramp-capacity> <label-discharging>
 label-discharging = %percentage%%
 
 format-full = <label-full>
-format-full-prefix =  
+format-full-prefix =  
 format-full-prefix-foreground = #55aa55
 
 ramp-capacity-0 =  
