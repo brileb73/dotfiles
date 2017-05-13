@@ -1,0 +1,3 @@
+# Run xmodmap on startup
+# Maps caps lock key to be another control
+exec --no-startup-id xmodmap ~/.Xmodmap
