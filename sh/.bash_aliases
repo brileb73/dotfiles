@@ -22,6 +22,7 @@ alias damnit='git add .'
 alias commit='git commit'
 alias shit='git push -u'
 alias emac='emacsclient -c'
+alias _='sudo'
  
 export NVM_DIR='/home/bleblanc/.nvm'
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # Load the fkn thing
