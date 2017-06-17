@@ -1,10 +1,10 @@
+#======================================================================
 # User Defined Shell Aliases
 #
-# Defined in a separate file to allow loading for bash and zsh
-
+# Defined in a separate file to allow loading from bash and zsh
+#======================================================================
 export VISUAL='vim'
 export EDITOR=$VISUAL
-
 alias ls='ls --color=auto'
 alias ll='ls -l'
 alias la='ls -la'
@@ -24,9 +24,36 @@ alias shit='git push -u'
 alias emac='emacsclient -c'
 alias _='sudo'
  
-export NVM_DIR='/home/bleblanc/.nvm'
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # Load the fkn thing
- 
+#======================================================================
+# NVM lazy load
+#======================================================================
+start_nvm() {
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+}
+
+nvm() {
+  unset -f nvm
+  start_nvm
+  nvm "$@"
+}
+
+node() {
+  unset -f node
+  start_nvm
+  node "$@"
+}
+
+npm() {
+  unset -f npm
+  start_nvm
+  npm "$@"
+}
+
+#======================================================================
+# CFNWatcher integration w/ aws cli
+#======================================================================
 #aws() {
 #  if [[ "$1" == "cloudformation" ]]; then
 #    cfnwatcher ${@:2}
@@ -34,7 +61,10 @@ export NVM_DIR='/home/bleblanc/.nvm'
 #    aws $@
 #  fi
 #}
- 
+
+#======================================================================
+# Compressed File Extraction
+#======================================================================
 extract () {
   if [ -f $1 ] ; then
     case $1 in
@@ -58,7 +88,9 @@ extract () {
   fi
 }
 
+#======================================================================
+# Compatibility for shell to update env vars
+#======================================================================
 awscache() {
   eval `$HOME/repo/brians-stupid-scripts/awscache.py $@`
 }
-
