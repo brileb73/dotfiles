@@ -18,6 +18,7 @@ alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 alias gp='git pull'
 alias damn='git status'
+alias dman='damn'
 alias damnit='git add .'
 alias commit='git commit'
 alias shit='git push -u'
@@ -93,4 +94,11 @@ extract () {
 #======================================================================
 awscache() {
   eval `$HOME/repo/brians-stupid-scripts/awscache.py $@`
+}
+
+#======================================================================
+# Fucking SSH usernames goddamn
+#======================================================================
+login() {
+  ssh $@ || ssh -l bleblanc $@
 }
