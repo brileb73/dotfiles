@@ -5,7 +5,14 @@
 #======================================================================
 export VISUAL='vim'
 export EDITOR=$VISUAL
-alias ls='ls --color=auto'
+
+if $(ls --color=auto &>/dev/null); then
+  alias ls='ls --color=auto'
+else
+  # Fucking mac bash...
+  alias ls='ls -G'
+fi
+
 alias ll='ls -l'
 alias la='ls -la'
 alias l='ls -lah'

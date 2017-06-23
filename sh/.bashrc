@@ -1,11 +1,11 @@
-#
+#======================================================================
 # ~/.bashrc
-#
+#======================================================================
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
+# Original prompt
 #PS1='[\u@\h \W]\$ '
 
 # Source if file exists
