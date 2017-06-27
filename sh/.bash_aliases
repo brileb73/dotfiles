@@ -31,6 +31,7 @@ alias commit='git commit'
 alias shit='git push -u'
 alias emac='emacsclient -c'
 alias _='sudo'
+alias rdsendpoint="aws cloudformation describe-stacks --query 'Stacks[].Outputs[?OutputKey==\`RDSEndpoint\`].OutputValue' --output text"
  
 #======================================================================
 # NVM lazy load
