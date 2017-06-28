@@ -10,14 +10,15 @@ Xcursor.size:  0
 XTerm*background: #6aa7a5
 XTerm*foreground: #6aa7a5
 XTerm*reverseVideo: on
-XTerm*faceName: HackRegular:size=11:antialias=true
+XTerm*faceName: HackRegular:size=9:antialias=true
 XTerm*selectToClipboard: true
 
 
-URxvt.font:                             xft:Hack:size=10
+URxvt.font:                             xft:Hack:size=9
 URxvt.geometry:                         80x20
 URxvt.depth:                            32
-URxvt.background:	                    [100]#101010
+URxvt.background:	                    [100]#202020
+URxvt.foreground:                       #cccccc
 URxvt*scrollBar:                        false
 URxvt*mouseWheelScrollPage:             false
 URxvt*cursorBlink:                      true
