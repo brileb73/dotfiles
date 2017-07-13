@@ -56,6 +56,7 @@ source_exist $ZSH/oh-my-zsh.sh
 source_exist $HOME/.promptline
 source_exist $HOME/.bash_aliases
 source_exist $HOME/.bash_nag
+source_exist $HOME/.local/bin/aws_zsh_completer.sh
 # ================ common-files =======================================
 
 
