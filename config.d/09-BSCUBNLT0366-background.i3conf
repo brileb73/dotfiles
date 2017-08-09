@@ -1,1 +1,2 @@
-exec_always --no-startup-id feh --bg-scale ~/Pictures/calvinhobbes_water_wagon.jpg
+#exec_always --no-startup-id feh --bg-scale ~/Pictures/calvinhobbes_water_wagon.jpg
+exec_always --no-startup-id feh --bg-scale ~/Pictures/unsplash-roadrunner-bg.jpg
