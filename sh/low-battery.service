@@ -1,7 +1,0 @@
-[Unit]
-Description=Check for low battery
-
-[Service]
-Type=simple
-ExecStart=/usr/local/bin/lowbatt
-PIDFile=/tmp/lowbatt.pid
