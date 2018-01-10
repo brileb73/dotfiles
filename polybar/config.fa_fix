@@ -1,0 +1,368 @@
+[global/wm]
+#margin-top = 8
+#margin-bottom = 8
+#margin-left = 8
+#margin-right = 8
+
+
+[colors]
+;orange = #FF6200
+;orange = #d65d0e
+darkgray = ${xrdb:color8}
+orange = ${xrdb:color9}
+white = #ebdbb2
+gray = #585858
+black = #090909
+red = #c795ae
+blue = #95aec7
+yellow = #c7ae95
+green = #aec795
+#background = #262626
+background = #F2282C34
+#background-alt = #4e4e4e
+background-alt = #BB2f343f
+#foreground = ${xrdb:foreground}
+foreground = #dfdfdf
+#foreground-alt = #4e4e4e
+foreground-alt = #f3f4f5
+primary = #1f222d
+secondary = #FF6200
+alert = #fb4934
+
+[bar/top]
+monitor = ${env:MONITOR}
+width = 100%
+height = 21
+;offset-x = 1%
+;offset-y = 1%
+fixed-center = true
+
+locale = en_US.UTF-8
+
+enable-ipc = true
+
+padding-left = 8
+padding-right = 0
+
+module-margin-left = 0
+module-margin-right = 0
+
+modules-right = xbacklight separator battery separator volume separator date separator powermenu
+modules-center = i3
+;modules-left = spotify
+;modules-left = cpu_bars separator memory separator filesystem separator wlan
+modules-left = cpu_bars separator memory separator filesystem
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+underline-size = 2
+underline-color = ${colors.white}
+
+tray-detached = true
+tray-position = left
+tray-offset-x = 0
+tray-offset-y = 0
+;tray-maxsize = 16
+tray-padding = 2
+tray-transparent = false
+tray-scale = 1.0
+
+font-0 = "monospace:size=8;2"
+font-1 = "DejaVu Sans:size=8;2"
+font-2 = "Font Awesome 5 Free:style=Regular:size=8;2"
+font-3 = "Font Awesome 5 Free:style=Solid:size=8;2"
+font-4 = "Font Awesome 5 Brands:style=Regular:size=8;2"
+
+;[module/spotify]
+;type = custom/script
+;exec = ~/.config/polybar/spotify.sh
+;interval = 2
+
+[module/cpu_bars]
+type = internal/cpu
+interval = 0.5
+format = <label> <ramp-coreload>
+label = 
+format-padding = 1
+
+ramp-coreload-0 = ▁
+ramp-coreload-0-font = 2
+ramp-coreload-0-foreground = #aaff77
+ramp-coreload-1 = ▂
+ramp-coreload-1-font = 2
+ramp-coreload-1-foreground = #aaff77
+ramp-coreload-2 = ▃
+ramp-coreload-2-font = 2
+ramp-coreload-2-foreground = #aaff77
+ramp-coreload-3 = ▄
+ramp-coreload-3-font = 2
+ramp-coreload-3-foreground = #aaff77
+ramp-coreload-4 = ▅
+ramp-coreload-4-font = 2
+ramp-coreload-4-foreground = #fba922
+ramp-coreload-5 = ▆
+ramp-coreload-5-font = 2
+ramp-coreload-5-foreground = #fba922
+ramp-coreload-6 = ▇
+ramp-coreload-6-font = 2
+ramp-coreload-6-foreground = #ff5555
+ramp-coreload-7 = █
+ramp-coreload-7-font = 2
+ramp-coreload-7-foreground = #ff5555
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = false
+wrapping-scroll = false
+
+; Only show workspaces on the same output as the bar
+pin-workspaces = true
+
+;label-focused = %icon%
+;label-focused-font = 1
+label-focused-background = ${colors.background-alt}
+;label-focused-underline= ${colors.primary}
+label-focused-underline= ${colors.white}
+label-visible-underline = ${colors.foreground}
+label-focused-padding-left = 0
+label-focused-padding-right = 1
+label-visible-padding-left = 0
+label-visible-padding-right = 1
+
+label-unfocused-padding-right = 1
+label-unfocused-padding-left = 0
+
+label-occupied = %icon%
+label-occupied-foreground = ${colors.darkgray}
+label-occupied-padding = 2
+
+label-urgent = %icon%!
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+label-empty = %icon%
+label-empty-foreground = ${colors.foreground-alt}
+label-empty-padding = 2
+
+[module/wlan]
+type = internal/network
+interface = wlp3s0
+interval = 3.0
+
+format-connected = <ramp-signal> <label-connected>
+format-connected-padding = 1
+;format-connected-underline = #9fe178
+label-connected = %essid%
+
+format-disconnected = <label-disconnected>
+format-disconnected-padding = 1
+;format-disconnected-underline = ${self.format-connected-underline}
+label-disconnected = 
+label-disconnected-foreground = ${colors.foreground-alt}
+
+ramp-signal-0 = ▁
+ramp-signal-0-font = 2
+ramp-signal-0-foreground = #ff5555
+ramp-signal-1 = ▂
+ramp-signal-1-font = 2
+ramp-signal-1-foreground = #ff5555
+ramp-signal-2 = ▃
+ramp-signal-2-font = 2
+ramp-signal-2-foreground = #fba922
+ramp-signal-3 = ▄
+ramp-signal-3-font = 2
+ramp-signal-3-foreground = #fba922
+ramp-signal-4 = ▅
+ramp-signal-4-font = 2
+ramp-signal-4-foreground = #aaff77
+ramp-signal-5 = ▆
+ramp-signal-5-font = 2
+ramp-signal-5-foreground = #aaff77
+ramp-signal-6 = ▇
+ramp-signal-6-font = 2
+ramp-signal-6-foreground = #aaff77
+ramp-signal-7 = █
+ramp-signal-7-font = 2
+ramp-signal-7-foreground = #aaff77
+
+;ramp-signal-foreground = ${colors.foreground-alt}
+
+[module/xbacklight]
+type = internal/xbacklight
+format = <label> <bar>
+label = BL
+
+bar-width = 10
+bar-indicator = |
+bar-indicator-foreground = #ff
+bar-indicator-font = 2
+bar-fill = ─
+bar-fill-font = 2
+bar-fill-foreground = #9f78e1
+bar-empty = ─
+bar-empty-font = 2
+bar-empty-foreground = ${colors.foreground-alt}
+format-padding = 1
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+
+mount-0 = /
+;format-mounted-prefix = " "
+format-mounted-prefix = " "
+format-mounted-foreground = #928374
+label-mounted = %percentage_used%%
+label-mounted-foreground = ${root.foreground}
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = #928374
+format-mounted-padding = 1
+format-unmounted-padding = 1
+
+[module/date]
+type = internal/date
+date-alt =   %A, %d %B %Y %H:%M
+date = %{F#928374}%{F-} %H:%M
+interval = 5
+;format-underline = ${colors.white}
+;format-background = ${colors.black}
+format-foreground = ${colors.foreground}
+format-padding = 1
+
+label-separator = |
+
+[module/volume]
+type = internal/volume
+
+format-volume = <label-volume> <bar-volume>
+label-volume = 
+label-volume-foreground = ${root.foreground}
+label-padding = 2
+
+format-muted-prefix = " "
+format-muted-foreground = ${colors.white}
+label-muted = sound muted
+format-padding = 2
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
+format-muted-padding = 1
+format-volume-padding = 1
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = " "
+format-prefix-foreground = #928374
+;format-underline = #f90000
+label = %percentage%%
+label-foreground = ${root.foreground}
+format-padding = 1
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = " "
+format-prefix-foreground = #928374
+;format-underline = #4bffdc
+label = %percentage_used%%
+label-foreground = ${root.foreground}
+format-padding = 1
+
+[module/separator]
+type = custom/text
+content = |
+content-foreground = #4e4e4e
+
+
+[module/battery]
+type = internal/battery
+full-at = 100
+time-format = %H:%M
+
+format-charging = <animation-charging> <label-charging>
+label-charging = %percentage%% 
+label-plugged-in = 
+
+format-discharging = <ramp-capacity> <label-discharging>
+label-discharging = %percentage%%
+
+format-full = <label-full>
+format-full-prefix =  
+format-full-prefix-foreground = #55aa55
+
+ramp-capacity-0 =  
+ramp-capacity-1 =  
+ramp-capacity-2 =   
+ramp-capacity-0-foreground = ${colors.red}
+ramp-capacity-1-foreground = ${colors.white}
+ramp-capacity-2-foreground = #55aa55
+
+animation-charging-0 =  
+animation-charging-1 =   
+animation-charging-2 =  
+animation-charging-foreground = #55aa55
+animation-charging-framerate = 750
+
+format-full-padding = 1
+format-charging-padding = 1
+format-discharging-padding = 1
+
+[module/powermenu]
+type = custom/menu
+
+format-spacing = 1
+label-open = 
+label-open-foreground = ${colors.secondary}
+label-close = cancel
+label-close-foreground = ${colors.secondary}
+label-separator = |
+label-separator-foreground = ${colors.foreground-alt}
+
+menu-0-0 = logout
+menu-0-0-exec = menu-open-1
+menu-0-1 = reboot
+menu-0-1-exec = menu-open-2
+menu-0-2 = power off
+menu-0-2-exec = menu-open-3
+
+menu-1-0 = logout
+menu-1-0-exec = i3msg exit
+menu-1-1 = cancel
+menu-1-1-exec = menu-open-0
+
+menu-2-0 = cancel
+menu-2-0-exec = menu-open-0
+menu-2-1 = reboot
+menu-2-1-exec = systemctl reboot
+
+menu-3-0 = power off
+menu-3-0-exec = systemctl poweroff
+menu-3-1 = cancel
+menu-3-1-exec = menu-open-0
+
+format-padding = 1
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
