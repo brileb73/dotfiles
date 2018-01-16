@@ -40,7 +40,7 @@ set_from_resource   $color17    i3wm.color17    $base0F
 set_from_resource   $color18    i3wm.color18    $base01
 set_from_resource   $color19    i3wm.color19    $base02
 set_from_resource   $color20    i3wm.color20    $base04
-set_from resource   $color21    i3wm.color21    $base06
+set_from_resource   $color21    i3wm.color21    $base06
 
 # Theme colors
 # class                 border   backgr.  text     indic.   chld_brdr
