@@ -1,0 +1,28 @@
+{
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.renderLineHighlight": "gutter",
+    "editor.renderWhitespace": "boundary",
+    "editor.rulers": [
+        80,
+        100
+    ],
+    "editor.tabSize": 2,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "gitlens.codeLens.enabled": false,
+    "gitlens.hovers.currentLine.enabled": false,
+    "gitProjectManager.baseProjectsFolders": [
+        "~/git",
+        "~/opt"
+    ],
+    "gitProjectManager.maxDepthRecursion": 2,
+    "python.pythonPath": "python",
+    "python.venvPath": "~/venvs",
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "window.zoomLevel": -1,
+    "[python]": {
+        "editor.tabSize": 4
+    }
+}
