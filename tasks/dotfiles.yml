@@ -1,4 +1,11 @@
 ---
+- name: Create directories
+  file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+  - "~/.ssh"
+
 - name: Link dotfiles
   file:
     src: "{{ item.src }}"
