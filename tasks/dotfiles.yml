@@ -1,0 +1,9 @@
+---
+- name: Link dotfiles
+  file:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    state: link
+  when_items:
+  - src: "../ssh/config"
+    dest: "~/.ssh/config"
