@@ -1,0 +1,26 @@
+---
+- hosts: all
+  connection: local
+
+  vars_files:
+  - default.config.yml
+
+  pre_tasks:
+  - include_vars: "{{ item }}"
+    with_fileglob:
+    - "{{ playbook_dir }}/config.yml"
+    tags: ['always']
+
+  tasks:
+  - include: tasks/ansible-setup.yml
+  - include: tasks/dotfiles.yml
+
+  - include: tasks/mac-osx.yml
+    when: ansible_os_family == "Darwin"
+    tags:
+    - osx
+
+  - include: tasks/arch.yml
+    when: ansible_os_family == "Archlinux"
+    tags:
+    - arch

@@ -1,0 +1,11 @@
+---
+- name: Create ansible downloads directory
+  file:
+    path: "{{ downloads }}"
+    state: directory
+
+- name: Create ansible config directory
+  file:
+    path: /etc/ansible
+    state: directory
+  become: yes
