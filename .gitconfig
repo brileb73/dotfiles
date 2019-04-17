@@ -1,0 +1,17 @@
+[user]
+	name = Brian LeBlanc
+	email = brian.leblanc@bluespurs.com
+[fetch]
+	prune = true
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[mergetool]
+	prompt = false
+[alias]
+	s = status
+	st = status
+	co = checkout
+	br = branch
+	ci = commit
+	unstage = reset HEAD --

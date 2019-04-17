@@ -15,6 +15,7 @@ zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p
 zstyle ':completion:*' squeeze-slashes true
 zstyle ':completion:*' verbose true
 zstyle :compinstall filename "$HOME/.zshrc"
+zstyle :prompt:shrink_path fish yes
 
 autoload -Uz compinit
 compinit
@@ -26,7 +27,7 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
-setopt appendhistory extendedglob nomatch notify
+setopt appendhistory extendedglob nomatch notify prompt_subst
 unsetopt autocd beep
 bindkey -e
 
@@ -36,10 +37,10 @@ export WORDCHARS="*?[]~=;!#$%^(){}<>"
 
 # ================ oh-my-zsh ==========================================
 # Path to oh-my-zsh installation
-export ZSH=/usr/share/oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load, can also be "random"
-ZSH_THEME="gallois"
+ZSH_THEME="brian"
 
 # Hyphen-insensitive completion. Case sensitive completion must be off.
 # _ and - will be interchangeable.
@@ -60,7 +61,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # plugins can be found in /usr/share/oh-my-zsh/plugins/*
 # Custom plugins may be added to /usr/share/oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(archlinux git)
+plugins=(aws git shrink-path)
 # ================ oh-my-zsh ==========================================
 
 
@@ -72,13 +73,15 @@ source_exist() {
 source_exist $ZSH/oh-my-zsh.sh
 source_exist $HOME/.bash_aliases
 source_exist $HOME/.bash_nag
-source_exist /usr/share/nvm/init-nvm.sh
+#source_exist /usr/share/nvm/init-nvm.sh
 # ================ common-files =======================================
 
 
 # ================ exports ============================================
 export ARCHFLAGS="-arch x86_64"
 export SSH_KEY_PATH="~/.ssh/rsa_id"
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH="$PATH:$HOME/.gem/ruby/bin"
+export PATH=$HOME/bin:/usr/local/bin:$PATH:$HOME/.gem/ruby/bin:$HOME/Library/Python/3.7/bin/
 # ================ exports ============================================
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
