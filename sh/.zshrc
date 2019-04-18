@@ -1,20 +1,13 @@
 # ================ compinstall ========================================
-zstyle ':completion:*' auto-description 'specify: %d'
-zstyle ':completion:*' completer _complete _ignored _approximate
-zstyle ':completion:*' expand prefix suffix
+zstyle ':completion:*' completer _complete _ignored _correct _approximate
 zstyle ':completion:*' format 'Completing %d'
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' list-colors ''
-zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
-zstyle ':completion:*' list-suffixes true
-zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|[._-]=* r:|=*'
-zstyle ':completion:*' max-errors 10
-zstyle ':completion:*' menu select=1
+zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:]}={[:upper:]}'
+zstyle ':completion:*' menu select=2
 zstyle ':completion:*' original true
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
-zstyle ':completion:*' squeeze-slashes true
-zstyle ':completion:*' verbose true
-zstyle :compinstall filename "$HOME/.zshrc"
+zstyle :compinstall filename '/home/bleblanc/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -23,23 +16,20 @@ compinit
 
 # ================ zsh-newuser-install ================================
 HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
-
-setopt appendhistory extendedglob nomatch notify
-unsetopt autocd beep
+HISTSIZE=100000
+SAVEHIST=100000
+setopt appendhistory extendedglob notify
+unsetopt autocd beep nomatch
 bindkey -e
-
-export WORDCHARS="*?[]~=;!#$%^(){}<>"
 # ================ zsh-newuser-install ================================
 
 
 # ================ oh-my-zsh ==========================================
 # Path to oh-my-zsh installation
-export ZSH=/usr/share/oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load, can also be "random"
-ZSH_THEME="gallois"
+ZSH_THEME="brime"
 
 # Hyphen-insensitive completion. Case sensitive completion must be off.
 # _ and - will be interchangeable.
@@ -57,10 +47,10 @@ COMPLETION_WAITING_DOTS="true"
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 HIST_STAMPS="yyyy-mm-dd"
 
-# plugins can be found in /usr/share/oh-my-zsh/plugins/*
-# Custom plugins may be added to /usr/share/oh-my-zsh/custom/plugins/
+# plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(archlinux git)
+plugins=(aws git shrink-path)
 # ================ oh-my-zsh ==========================================
 
 
@@ -70,15 +60,25 @@ source_exist() {
 }
 
 source_exist $ZSH/oh-my-zsh.sh
+source_exist $HOME/.promptline
 source_exist $HOME/.bash_aliases
 source_exist $HOME/.bash_nag
-source_exist /usr/share/nvm/init-nvm.sh
+source_exist $HOME/.local/bin/aws_zsh_completer.sh
+source_exist $HOME/.manifold/bin/.manifold_completion
 # ================ common-files =======================================
 
 
 # ================ exports ============================================
 export ARCHFLAGS="-arch x86_64"
 export SSH_KEY_PATH="~/.ssh/rsa_id"
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH="$PATH:$HOME/.gem/ruby/bin"
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH:$HOME/.rvm/bin:$HOME/.manifold/bin
+source /etc/profile.d/rvm.sh
 # ================ exports ============================================
+
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /home/bleblanc/git/bluespurs/p2p-yale-api/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/bleblanc/git/bluespurs/p2p-yale-api/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /home/bleblanc/git/bluespurs/p2p-yale-api/node_modules/tabtab/.completions/sls.zsh ]] && . /home/bleblanc/git/bluespurs/p2p-yale-api/node_modules/tabtab/.completions/sls.zsh
