@@ -20,8 +20,14 @@
 
 - name: install homebrew packages
   homebrew:
-    name: "{{ homebrew_installed_packages }}"
+    name: "{{ homebrew_packages }}"
     state: present
+
+- name: install homebrew cask apps
+  homebrew_cask:
+    name: "{{ homebrew_cask_apps }}"
+    state: present
+    install_options: "appdir={{ homebrew_cask_appdir }}"
 
 - name: install oh-my-zsh
   git:
