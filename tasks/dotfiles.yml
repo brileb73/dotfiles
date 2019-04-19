@@ -3,10 +3,3 @@
   git:
     repo: https://github.com/anishathalye/dotbot
     dest: ~/.dotbot
-
-- name: create directories
-  file:
-    path: "{{ item }}"
-    state: directory
-  with_items:
-  - "~/.ssh"
