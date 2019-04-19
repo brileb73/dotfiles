@@ -52,3 +52,20 @@
 # Dots
 - name: run dotbot (macos)
   command: "~/.dotbot/bin/dotbot -d {{ playbook_dir }}/files -c {{ playbook_dir }}/files/macos.conf.yaml"
+
+# Set iTerm2 config
+- name: set iterm2 config dotfile
+  osx_defaults:
+    domain: com.googlecode.iterm2
+    key: PrefsCustomFolder
+    state: present
+    type: string
+    value: "{{ playbook_dir }}/files/iterm2"
+
+- name: set iterm2 to load config from dotfile
+  osx_defaults:
+    domain: com.googlecode.iterm2
+    key: LoadPrefsFromCustomFolder
+    state: present
+    type: bool
+    value: true
