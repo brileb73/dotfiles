@@ -6,6 +6,7 @@ homebrew_install_path: /usr/local/bin
 
 homebrew_packages:
 - autoconf
+- gcc
 - gettext
 - git
 - go
@@ -25,6 +26,7 @@ homebrew_cask_apps:
 - docker
 - firefox
 - google-chrome
+- iterm2
 - macvim
 - slack
 
