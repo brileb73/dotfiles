@@ -66,6 +66,7 @@
     src: "{{ playbook_dir }}/files/sh/.bash_profile"
     dest: ~/.bash_profile
     force: no
+    state: link
 
 # Dots
 - name: run dotbot (macos)
