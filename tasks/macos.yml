@@ -20,6 +20,9 @@
     state: link
 
 # Set macos defaults
+- name: unhide ~/Library
+  command: chflags nohidden ~/Library
+
 - name: set macos defaults
   osx_defaults:
     domain: "{{ item.domain }}"

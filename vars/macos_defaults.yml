@@ -20,7 +20,7 @@ macos_defaults:
 - domain: NSGlobalDomain
   key: AppleKeyboardUIMode
   type: int
-  value: 0
+  value: 3
 
 # Ask for password 5 seconds after screensaver
 - domain: com.apple.screensaver
@@ -64,6 +64,22 @@ macos_defaults:
   type: string
   value: clmv
 
+# Keep folders on top when sorting by name
+- domain: com.apple.finder
+  key: _FXSortFoldersFirst
+  type: bool
+  value: true
+
+# Stop DS_Store writing for network and usb volumes
+- domain: com.apple.desktopservices
+  key: DSDontWriteNetworkStores
+  type: bool
+  value: true
+- domain: com.apple.desktopservices
+  key: DSDontWriteUSBStores
+  type: bool
+  value: true
+
 # Set hot corners
 #  0: no-op
 #  2: Mission Control
@@ -92,7 +108,34 @@ macos_defaults:
   type: int
   value: 5
 
+# Tap to click
+- domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+  key: Clicking
+  type: bool
+  value: true
+- domain: NSGlobalDomain
+  key: com.apple.mouse.tapBehavior
+  type: int
+  value: 1
+
+# Three finger drag
+- domain: com.apple.AppleMultitouchTrackpad
+  key: TrackpadThreeFingerDrag
+  type: bool
+  value: true
+- domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+  key: TrackpadThreeFingerDrag
+  type: bool
+  value: true
+
+# Disable "natural" scrolling
+- domain: NSGlobalDomain
+  key: com.apple.swipescrolldirection
+  type: bool
+  value: false
+
 macos_defaults_10_12:
+# iTerm2 save config to dotfiles
 - domain: com.googlecode.iterm2
   key: PrefsCustomFolder
   type: string
