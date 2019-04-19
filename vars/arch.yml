@@ -1,0 +1,2 @@
+---
+dotbot_config: "{{ playbook_dir }}/files/arch.conf.yml"
