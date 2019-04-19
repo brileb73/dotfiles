@@ -1,2 +1,3 @@
 ---
--
+- name: run dotbot
+  command: "~/.dotbot/bin/dotbot -d {{ playbook_dir }}/files -c {{ playbook_dir }}/files/arch.conf.yaml"

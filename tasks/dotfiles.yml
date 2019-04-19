@@ -10,11 +10,3 @@
     state: directory
   with_items:
   - "~/.ssh"
-
-- name: run dotbot for macos
-  when: ansible_os_family == "Darwin"
-  command: "~/.dotbot/bin/dotbot -d {{ playbook_dir }}/files -c {{ playbook_dir }}/files/macos.conf.yaml"
-
-- name: run dotbot for arch
-  when: ansible_os_family == "Archlinux"
-  command: "~/.dotbot/bin/dotbot -d {{ playbook_dir }}/files -c {{ playbook_dir }}/files/arch.conf.yaml"
