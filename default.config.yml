@@ -29,5 +29,7 @@ homebrew_cask_apps:
 - iterm2
 - macvim
 - slack
+- spotify
+- visual-studio-code
 
 oh_my_zsh_path: ~/.oh-my-zsh
