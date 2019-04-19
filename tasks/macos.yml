@@ -11,7 +11,7 @@
   args:
     creates: "{{ homebrew_install_path }}/brew"
 
-- name: install shells
+- name: install shells (macos)
   homebrew:
     name:
     - bash
@@ -21,29 +21,31 @@
 
 - name: install homebrew packages
   homebrew:
-    name: "{{ homebrew_packages }}"
+    name: "{{ item }}"
     state: present
+  loop: "{{ homebrew_packages }}"
 
 - name: install homebrew cask apps
   homebrew_cask:
-    name: "{{ homebrew_cask_apps }}"
+    name: "{{ item }}"
     state: present
     install_options: "appdir={{ homebrew_cask_appdir }}"
+  loop: "{{ homebrew_cask_apps }}"
 
 # Oh-my-zsh
-- name: install oh-my-zsh
+- name: install oh-my-zsh (macos)
   git:
     repo: https://github.com/robbyrussell/oh-my-zsh
     dest: "{{ oh_my_zsh_path }}"
 
-- name: change shell to zsh
+- name: change shell to zsh (macos)
   user:
     name: "{{ ansible_user_id }}"
     shell: "{{ homebrew_install_path }}/zsh"
   become: yes
 
 # Fix bash
-- name: create user bash_profile
+- name: create user bash_profile (macos)
   file:
     src: "{{ playbook_dir }}/files/sh/.bash_profile"
     dest: ~/.bash_profile
@@ -53,19 +55,14 @@
 - name: run dotbot (macos)
   command: "~/.dotbot/bin/dotbot -d {{ playbook_dir }}/files -c {{ playbook_dir }}/files/macos.conf.yaml"
 
-# Set iTerm2 config
-- name: set iterm2 config dotfile
+# Set macos defaults
+- name: set macos defaults
   osx_defaults:
-    domain: com.googlecode.iterm2
-    key: PrefsCustomFolder
+    domain: "{{ item.domain }}"
+    key: "{{ item.key }}"
     state: present
-    type: string
-    value: "{{ playbook_dir }}/files/iterm2"
-
-- name: set iterm2 to load config from dotfile
-  osx_defaults:
-    domain: com.googlecode.iterm2
-    key: LoadPrefsFromCustomFolder
-    state: present
-    type: bool
-    value: true
+    type: "{{ item.type }}"
+    value: "{{ item.value }}"
+  loop: "{{ macos_defaults }}"
+  loop_control:
+    label: "{{ item.key }}"

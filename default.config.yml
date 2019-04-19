@@ -33,3 +33,13 @@ homebrew_cask_apps:
 - visual-studio-code
 
 oh_my_zsh_path: ~/.oh-my-zsh
+
+macos_defaults:
+- domain: com.googlecode.iterm2
+  key: PrefsCustomFolder
+  type: string
+  value: "{{ playbook_dir }}/files/iterm2"
+- domain: com.googlecode.iterm2
+  key: LoadPrefsFromCustomFolder
+  type: bool
+  value: true
