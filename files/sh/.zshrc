@@ -36,7 +36,7 @@ export WORDCHARS="*?[]~=;!#$%^(){}<>"
 
 # ================ oh-my-zsh ==========================================
 # Path to oh-my-zsh installation
-export ZSH=/usr/share/oh-my-zsh
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load, can also be "random"
 ZSH_THEME="gallois"

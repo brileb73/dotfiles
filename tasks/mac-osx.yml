@@ -8,7 +8,37 @@
 - name: install homebrew
   command: "{{ homebrew_install_script }}"
   args:
-    creates: "{{ homebrew_bin }}"
+    creates: "{{ homebrew_install_path }}/brew"
+
+- name: install shells
+  homebrew:
+    name:
+    - bash
+    - zsh
+    state: present
+    update_homebrew: yes
+
+- name: install homebrew packages
+  homebrew:
+    name: "{{ homebrew_installed_packages }}"
+    state: present
+
+- name: install oh-my-zsh
+  git:
+    repo: https://github.com/robbyrussell/oh-my-zsh
+    dest: "{{ oh_my_zsh_path }}"
+
+- name: change shell to zsh
+  user:
+    name: "{{ ansible_user_id }}"
+    shell: "{{ homebrew_install_path }}/zsh"
+  become: yes
+
+- name: create user bash_profile
+  file:
+    src: "{{ playbook_dir }}/files/sh/.bash_profile"
+    dest: ~/.bash_profile
+    force: no
 
 - name: run dotbot (macos)
   command: "~/.dotbot/bin/dotbot -d {{ playbook_dir }}/files -c {{ playbook_dir }}/files/macos.conf.yaml"

@@ -2,4 +2,21 @@
 downloads: ~/.ansible-downloads/
 
 homebrew_install_script: "{{ downloads }}/homebrew_install"
-homebrew_bin: "/usr/local/bin/brew"
+homebrew_install_path: /usr/local/bin
+
+homebrew_installed_packages:
+- autoconf
+- gettext
+- git
+- go
+- grep
+- htop
+- jq
+- macvim
+- mysql
+- node
+- nvm
+- readline
+- wget
+
+oh_my_zsh_path: ~/.oh-my-zsh
