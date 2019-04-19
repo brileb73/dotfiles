@@ -13,11 +13,12 @@
 
 - name: install shells (macos)
   homebrew:
-    name:
-    - bash
-    - zsh
+    name: "{{ item }}"
     state: present
     update_homebrew: yes
+  loop:
+  - bash
+  - zsh
 
 - name: install homebrew packages
   homebrew:
