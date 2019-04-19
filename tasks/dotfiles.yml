@@ -1,10 +1,8 @@
 ---
-- name: backup existing files
-  copy:
-    backup: yes
-    dest: "{{ item }}"
-  with_items:
-  - "~/.bashrc"
+- name: install dotbot
+  git:
+    repo: https://github.com/anishathalye/dotbot
+    dest: ~/.dotbot
 
 - name: create directories
   file:
@@ -13,16 +11,10 @@
   with_items:
   - "~/.ssh"
 
-- name: link dotfiles
-  file:
-    src: "{{ item.src }}"
-    dest: "{{ item.dest }}"
-    force: yes
-    state: link
-  with_items:
-  - src: "{{ playbook_dir }}/files/ssh/config"
-    dest: "~/.ssh/config"
-  - src: "{{ playbook_dir }}/files/sh/.bash_aliases"
-    dest: "~/.bash_aliases"
-  - src: "{{ playbook_dir }}/files/sh/.bash_nag"
-    dest: "~/.bash_nag"
+- name: run dotbot for macos
+  when: ansible_os_family == "Darwin"
+  command: "~/.dotbot/bin/dotbot -d {{ playbook_dir }}/files -c {{ playbook_dir }}/files/macos.conf.yaml"
+
+- name: run dotbot for arch
+  when: ansible_os_family == "Archlinux"
+  command: "~/.dotbot/bin/dotbot -d {{ playbook_dir }}/files -c {{ playbook_dir }}/files/arch.conf.yaml"

@@ -30,7 +30,7 @@ The i3cfgbuild files are the part config files used as input for i3cfgbuild from
 
 ## i3lock-blur
 
-The i3lock screen used is just symlinked from [this repo](https://github.com/brileb73/i3lock-blur) to /usr/local/bin/i3lock-blur
+The i3lock screen used is just symlinked from [this repo](https://github.com/omnibrian/i3lock-blur) to /usr/local/bin/i3lock-blur
 
 ## oh-my-zsh
 
