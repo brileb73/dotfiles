@@ -1,16 +1,28 @@
 ---
-- name: Create directories
+- name: backup existing files
+  copy:
+    backup: yes
+    dest: "{{ item }}"
+  with_items:
+  - "~/.bashrc"
+
+- name: create directories
   file:
     path: "{{ item }}"
     state: directory
   with_items:
   - "~/.ssh"
 
-- name: Link dotfiles
+- name: link dotfiles
   file:
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
+    force: yes
     state: link
   with_items:
-  - src: "{{ playbook_dir }}/ssh/config"
+  - src: "{{ playbook_dir }}/files/ssh/config"
     dest: "~/.ssh/config"
+  - src: "{{ playbook_dir }}/files/sh/.bash_aliases"
+    dest: "~/.bash_aliases"
+  - src: "{{ playbook_dir }}/files/sh/.bash_nag"
+    dest: "~/.bash_nag"
