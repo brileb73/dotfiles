@@ -9,7 +9,8 @@
   - include_vars: "{{ item }}"
     with_fileglob:
     - "{{ playbook_dir }}/config.yml"
-    tags: ['always']
+    tags:
+    - always
 
   tasks:
   - include: tasks/ansible-setup.yml

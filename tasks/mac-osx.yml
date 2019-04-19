@@ -1,3 +1,14 @@
 ---
-- name: run dotbot
+- name: download homebrew install script
+  get_url:
+    url: https://raw.githubusercontent.com/Homebrew/install/master/install
+    dest: "{{ homebrew_install_script }}"
+    mode: 0755
+
+- name: install homebrew
+  command: "{{ homebrew_install_script }}"
+  args:
+    creates: "{{ homebrew_bin }}"
+
+- name: run dotbot (macos)
   command: "~/.dotbot/bin/dotbot -d {{ playbook_dir }}/files -c {{ playbook_dir }}/files/macos.conf.yaml"

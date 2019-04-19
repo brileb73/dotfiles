@@ -1,2 +1,5 @@
 ---
 downloads: ~/.ansible-downloads/
+
+homebrew_install_script: "{{ downloads }}/homebrew_install"
+homebrew_bin: "/usr/local/bin/brew"
