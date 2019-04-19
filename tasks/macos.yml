@@ -26,12 +26,12 @@
     state: present
   loop: "{{ homebrew_packages }}"
 
-- name: install homebrew packages requiring macos sierra
+- name: install homebrew packages (>= 10.12)
   homebrew:
     name: "{{ item }}"
     state: present
   when: "ansible_distribution_version is version('10.12', '>=')"
-  loop: "{{ homebrew_packages_sierra }}"
+  loop: "{{ homebrew_packages_10_12 }}"
 
 - name: install homebrew cask apps
   homebrew_cask:
@@ -39,6 +39,14 @@
     state: present
     install_options: "appdir={{ homebrew_cask_appdir }}"
   loop: "{{ homebrew_cask_apps }}"
+
+- name: install homebrew cask apps (>= 10.12)
+  homebrew_cask:
+    name: "{{ item }}"
+    state: present
+    install_options: "appdir={{ homebrew_cask_appdir }}"
+  when: "ansible_distribution_version is version('10.12', '>=')"
+  loop: "{{ homebrew_cask_apps_10_12 }}"
 
 # Oh-my-zsh
 - name: install oh-my-zsh (macos)
@@ -72,5 +80,16 @@
     type: "{{ item.type }}"
     value: "{{ item.value }}"
   loop: "{{ macos_defaults }}"
+  loop_control:
+    label: "{{ item.key }}"
+
+- name: set macos defaults (>= 10.12)
+  osx_defaults:
+    domain: "{{ item.domain }}"
+    key: "{{ item.key }}"
+    state: present
+    type: "{{ item.type }}"
+    value: "{{ item.value }}"
+  loop: "{{ macos_defaults_10_12 }}"
   loop_control:
     label: "{{ item.key }}"
