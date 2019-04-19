@@ -7,9 +7,12 @@ Repo for all my stupid dotfiles
 OS X:
 
 1. Install Apple command line tools: `xcode-select --install`
+1. Clone this repo: `git clone https://github.com/omnibrian/dotfiles.git`
 1. Install `pip`: `curl https://bootstrap.pypa.io/get-pip.py | sudo python`
 1. Install `ansible`: `sudo pip install ansible`
 1. Run `ansible-playbook main.yml -i inventory -K` from the root of this repo
+1. Manual steps:
+  * System Preferences > Keyboard > Modifier Keys > Caps Lock -> Control
 
 ## Contents
 

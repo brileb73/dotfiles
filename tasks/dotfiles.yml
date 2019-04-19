@@ -2,4 +2,4 @@
 - name: install dotbot
   git:
     repo: https://github.com/anishathalye/dotbot
-    dest: ~/.dotbot
+    dest: "{{ dotbot_path }}"

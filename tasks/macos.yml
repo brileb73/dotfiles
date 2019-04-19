@@ -70,7 +70,7 @@
 
 # Dots
 - name: run dotbot (macos)
-  command: "~/.dotbot/bin/dotbot -d {{ playbook_dir }}/files -c {{ playbook_dir }}/files/macos.conf.yaml"
+  command: "{{ dotbot_bin }} -d {{ playbook_dir }}/files -c {{ playbook_dir }}/files/macos.conf.yaml"
 
 # Set macos defaults
 - name: set macos defaults
