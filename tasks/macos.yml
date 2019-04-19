@@ -26,6 +26,13 @@
     state: present
   loop: "{{ homebrew_packages }}"
 
+- name: install homebrew packages requiring macos sierra
+  homebrew:
+    name: "{{ item }}"
+    state: present
+  when: "ansible_distribution_version is version('10.12', '>=')"
+  loop: "{{ homebrew_packages_sierra }}"
+
 - name: install homebrew cask apps
   homebrew_cask:
     name: "{{ item }}"

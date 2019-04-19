@@ -13,11 +13,14 @@ homebrew_packages:
 - grep
 - htop
 - jq
-- node
 - nvm
 - python3
 - readline
 - wget
+
+homebrew_packages_sierra:
+- mysql
+- node
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
