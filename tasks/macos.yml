@@ -1,4 +1,5 @@
 ---
+# Homebrew
 - name: download homebrew install script
   get_url:
     url: https://raw.githubusercontent.com/Homebrew/install/master/install
@@ -29,6 +30,7 @@
     state: present
     install_options: "appdir={{ homebrew_cask_appdir }}"
 
+# Oh-my-zsh
 - name: install oh-my-zsh
   git:
     repo: https://github.com/robbyrussell/oh-my-zsh
@@ -40,11 +42,13 @@
     shell: "{{ homebrew_install_path }}/zsh"
   become: yes
 
+# Fix bash
 - name: create user bash_profile
   file:
     src: "{{ playbook_dir }}/files/sh/.bash_profile"
     dest: ~/.bash_profile
     force: no
 
+# Dots
 - name: run dotbot (macos)
   command: "~/.dotbot/bin/dotbot -d {{ playbook_dir }}/files -c {{ playbook_dir }}/files/macos.conf.yaml"
