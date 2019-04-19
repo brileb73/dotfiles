@@ -19,7 +19,9 @@
   - include: tasks/ansible-setup.yml
   - include: tasks/dotfiles.yml
 
-  - include: tasks/macos.yml
+  - include:
+    - tasks/homebrew.yml
+    - tasks/macos.yml
     when: ansible_os_family == "Darwin"
     tags:
     - osx
