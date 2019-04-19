@@ -1,0 +1,7 @@
+---
+downloads: ~/.ansible-downloads/
+
+dotbot_path: ~/.dotbot
+dotbot_bin: "{{ dotbot_path }}/bin/dotbot"
+
+oh_my_zsh_path: ~/.oh-my-zsh

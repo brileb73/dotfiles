@@ -3,14 +3,13 @@
   connection: local
 
   vars_files:
-  - default.config.yml
+  - vars/main.yml
 
   pre_tasks:
-  - include_vars: "{{ item }}"
-    with_fileglob:
-    - "{{ playbook_dir }}/config.yml"
-    tags:
-    - always
+  - include_vars:
+    - vars/homebrew.yml
+    - vars/macos.yml
+    when: ansible_os_family == "Darwin"
 
   tasks:
   - include: tasks/ansible-setup.yml
