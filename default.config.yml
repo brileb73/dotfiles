@@ -13,7 +13,6 @@ homebrew_packages:
 - grep
 - htop
 - jq
-- mysql
 - node
 - nvm
 - python3
