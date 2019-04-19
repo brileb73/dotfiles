@@ -3,5 +3,6 @@ downloads: ~/.ansible-downloads/
 
 dotbot_path: ~/.dotbot
 dotbot_bin: "{{ dotbot_path }}/bin/dotbot"
+dotbot_default_config: "{{ playbook_dir }}/files/arch.conf.yml"
 
 oh_my_zsh_path: ~/.oh-my-zsh

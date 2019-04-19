@@ -9,7 +9,11 @@
   - include_vars:
     - vars/homebrew.yml
     - vars/macos.yml
+    - vars/macos_defaults.yml
     when: ansible_os_family == "Darwin"
+  - include_vars:
+    - vars/arch.yml
+    when: ansible_os_family == "Archlinux"
 
   tasks:
   - include: tasks/ansible-setup.yml

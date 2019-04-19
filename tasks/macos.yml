@@ -68,10 +68,6 @@
     force: no
     state: link
 
-# Dots
-- name: run dotbot (macos)
-  command: "{{ dotbot_bin }} -d {{ playbook_dir }}/files -c {{ playbook_dir }}/files/macos.conf.yaml"
-
 # Set macos defaults
 - name: set macos defaults
   osx_defaults:

@@ -1,0 +1,103 @@
+---
+macos_defaults:
+# Expand save panel
+- domain: NSGlobalDomain
+  key: NSNavPanelExpandedStateForSaveMode
+  type: bool
+  value: true
+# Expand print panel
+- domain: NSGlobalDomain
+  key: PMPrintingExpandedStateForPrint
+  type: bool
+  value: true
+# Save to disk by default
+- domain: NSGlobalDomain
+  key: NSDocumentSaveNewDocumentsToCloud
+  type: bool
+  value: false
+
+# Allow tab on modals
+- domain: NSGlobalDomain
+  key: AppleKeyboardUIMode
+  type: int
+  value: 0
+
+# Ask for password 5 seconds after screensaver
+- domain: com.apple.screensaver
+  key: askForPassword
+  type: int
+  value: 1
+- domain: com.apple.screensaver
+  key: askForPasswordDelay
+  type: int
+  value: 5
+
+# Show icons for drives and removable media
+- domain: com.apple.finder
+  key: ShowExternalDrivesOnDesktop
+  type: bool
+  value: true
+- domain: com.apple.finder
+  key: ShowHardDrivesOnDesktop
+  type: bool
+  value: false
+- domain: com.apple.finder
+  key: ShowRemovableMediaOnDesktop
+  type: bool
+  value: true
+
+# Show status bar
+- domain: com.apple.finder
+  key: ShowStatusBar
+  type: bool
+  value: true
+
+# Show full path in finder window title
+- domain: com.apple.finder
+  key: _FXShowPosixPathInTitle
+  type: bool
+  value: true
+
+# Default to column view in finder
+- domain: com.apple.finder
+  key: FXPreferredViewStyle
+  type: string
+  value: clmv
+
+# Set hot corners
+#  0: no-op
+#  2: Mission Control
+#  3: Show application windows
+#  4: Desktop
+#  5: Start screen saver
+#  6: Disable screen saver
+#  7: Dashboard
+# 10: Put display to sleep
+# 11: Launchpad
+# 12: Notification Center
+- domain: com.apple.dock
+  key: wvous-bl-corner
+  type: int
+  value: 11
+- domain: com.apple.dock
+  key: wvous-br-corner
+  type: int
+  value: 4
+- domain: com.apple.dock
+  key: wvous-tr-corner
+  type: int
+  value: 12
+- domain: com.apple.dock
+  key: wvous-tr-corner
+  type: int
+  value: 5
+
+macos_defaults_10_12:
+- domain: com.googlecode.iterm2
+  key: PrefsCustomFolder
+  type: string
+  value: "{{ playbook_dir }}/files/iterm2"
+- domain: com.googlecode.iterm2
+  key: LoadPrefsFromCustomFolder
+  type: bool
+  value: true
