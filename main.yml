@@ -11,6 +11,7 @@
     - include_vars: vars/macos.yml
     - include_vars: vars/macos_defaults.yml
     when: ansible_os_family == "Darwin"
+
   - block:
     - include_vars: vars/arch.yml
     when: ansible_os_family == "Archlinux"
@@ -35,6 +36,7 @@
     tags:
     - arch
 
+  - include: tasks/node.yml
   - include: tasks/packages.yml
   - include: tasks/vscode.yml
     tags:

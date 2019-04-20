@@ -1,0 +1,17 @@
+---
+- name: install nvm
+  git:
+    repo: https://github.com/creationix/nvm
+    dest: "{{ nvm_path }}"
+  tags:
+  - nvm
+
+- name: install node lts
+  command: "source {{ nvm_path }}/nvm.sh && nvm install --lts"
+  tags:
+  - nvm
+
+- name: alias default node
+  command: "source {{ nvm_path }}/nvm.sh && nvm alias default node"
+  tags:
+  - nvm
