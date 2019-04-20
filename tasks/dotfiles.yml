@@ -14,26 +14,26 @@
   tags:
   - zsh
 
-- name: create vim pathogen directories
+- name: create vim directories
   file:
     path: "{{ item }}"
     state: directory
     recurse: yes
   loop:
   - ~/.vim/autoload
-  - ~/.vim/bundle
+  - ~/.vim/plug
   tags:
   - vim
 
-- name: download vim pathogen
+- name: download vim-plug
   get_url:
-    url: https://tpo.pe/pathogen.vim
-    dest: ~/.vim/autoload/pathogen.vim
+    url: https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    dest: ~/.vim/autoload/plug.vim
     mode: 0644
   tags:
   - vim
 
-- name: install nerdtree
-  git:
-    repo: https://github.com/scrooloose/nerdtree
-    dest: ~/.vim/bundle/nerdtree
+- name: execute vim-plug install
+  command: vim +PlugInstall +qall
+  tags:
+  - vim
