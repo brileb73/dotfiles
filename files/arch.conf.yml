@@ -9,7 +9,6 @@
 - link:
     ~/.ssh/config: ssh/config
     ~/.bash_aliases: sh/.bash_aliases
-    ~/.bash_nag: sh/.bash_nag
     ~/.bashrc: sh/.bashrc
     # ~/.zshrc: sh/.zshrc
     ~/.config/Code/User/settings.json: code/settings.json
