@@ -32,3 +32,8 @@
     mode: 0644
   tags:
   - vim
+
+- name: install nerdtree
+  git:
+    repo: https://github.com/scrooloose/nerdtree
+    dest: ~/.vim/bundle/nerdtree
