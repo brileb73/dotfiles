@@ -1,0 +1,2 @@
+---
+dotbot_config: "{{ playbook_dir }}/files/macos.conf.yml"

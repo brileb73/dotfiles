@@ -1,9 +1,8 @@
 ---
-- name: Link dotfiles
-  file:
-    src: "{{ item.src }}"
-    dest: "{{ item.dest }}"
-    state: link
-  when_items:
-  - src: "../ssh/config"
-    dest: "~/.ssh/config"
+- name: install dotbot
+  git:
+    repo: https://github.com/anishathalye/dotbot
+    dest: "{{ dotbot_path }}"
+
+- name: execute dotbot
+  command: "{{ dotbot_bin }} -d {{ playbook_dir }}/files -c {{ dotbot_config | default(dotbot_default_config) }}"

@@ -1,2 +1,7 @@
-# Vim
-.*.swp
+# editors
+.vscode/
+*.sw[o-z]
+
+# ansible
+config.yml
+*.retry

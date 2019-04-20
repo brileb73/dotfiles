@@ -1,0 +1,26 @@
+---
+- name: install pacman packages
+  pacman:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ pacman_packages }}"
+
+- name: start docker
+  systemd:
+    name: docker.service
+    state: started
+    enabled: true
+  become: yes
+
+- name: create docker group
+  group:
+    name: docker
+    state: present
+  become: yes
+
+- name: add user to docker group
+  user:
+    name: "{{ ansible_user_id }}"
+    groups: docker
+    append: true
+  become: yes

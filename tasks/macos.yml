@@ -1,0 +1,46 @@
+---
+# Oh-my-zsh
+- name: install oh-my-zsh (macos)
+  git:
+    repo: https://github.com/robbyrussell/oh-my-zsh
+    dest: "{{ oh_my_zsh_path }}"
+
+- name: change shell to zsh (macos)
+  user:
+    name: "{{ ansible_user_id }}"
+    shell: "{{ homebrew_install_path }}/zsh"
+  become: yes
+
+# Fix bash
+- name: create user bash_profile (macos)
+  file:
+    src: "{{ playbook_dir }}/files/sh/.bash_profile"
+    dest: ~/.bash_profile
+    force: no
+    state: link
+
+# Set macos defaults
+- name: unhide ~/Library
+  command: chflags nohidden ~/Library
+
+- name: set macos defaults
+  osx_defaults:
+    domain: "{{ item.domain }}"
+    key: "{{ item.key }}"
+    state: present
+    type: "{{ item.type }}"
+    value: "{{ item.value }}"
+  loop: "{{ macos_defaults }}"
+  loop_control:
+    label: "{{ item.key }}"
+
+- name: set macos defaults (>= 10.12)
+  osx_defaults:
+    domain: "{{ item.domain }}"
+    key: "{{ item.key }}"
+    state: present
+    type: "{{ item.type }}"
+    value: "{{ item.value }}"
+  loop: "{{ macos_defaults_10_12 }}"
+  loop_control:
+    label: "{{ item.key }}"

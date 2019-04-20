@@ -1,0 +1,26 @@
+---
+downloads: ~/.ansible-downloads/
+
+dotbot_path: ~/.dotbot
+dotbot_bin: "{{ dotbot_path }}/bin/dotbot"
+dotbot_default_config: "{{ playbook_dir }}/files/arch.conf.yml"
+
+oh_my_zsh_path: ~/.oh-my-zsh
+
+vscode_extensions:
+- dbaeumer.vscode-eslint
+- eamodio.gitlens
+- felipecaputo.git-project-manager
+- formulahendry.auto-rename-tag
+- James-Yu.latex-workshop
+- kesmarag.base16-tomorrow-night
+- mauve.terraform
+- ms-python.python
+- ms-vscode.Go
+- msjsdiag.debugger-for-chrome
+- PeterJausovec.vscode-docker
+- rebornix.ruby
+- redhat.vscode-yaml
+- Tyriar.sort-lines
+- vscode-icons-team.vscode-icons
+- wholroyd.jinja

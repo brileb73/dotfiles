@@ -1,0 +1,49 @@
+---
+# Homebrew
+- name: download homebrew install script
+  get_url:
+    url: https://raw.githubusercontent.com/Homebrew/install/master/install
+    dest: "{{ homebrew_install_script }}"
+    mode: 0755
+
+- name: install homebrew
+  command: "{{ homebrew_install_script }}"
+  args:
+    creates: "{{ homebrew_install_path }}/brew"
+
+- name: install shells (and update homebrew)
+  homebrew:
+    name: "{{ item }}"
+    state: present
+    update_homebrew: yes
+  loop:
+  - bash
+  - zsh
+
+- name: install homebrew packages
+  homebrew:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ homebrew_packages }}"
+
+- name: install homebrew packages (>= 10.12)
+  homebrew:
+    name: "{{ item }}"
+    state: present
+  when: "ansible_distribution_version is version('10.12', '>=')"
+  loop: "{{ homebrew_packages_10_12 }}"
+
+- name: install homebrew cask apps
+  homebrew_cask:
+    name: "{{ item }}"
+    state: present
+    install_options: "appdir={{ homebrew_cask_appdir }}"
+  loop: "{{ homebrew_cask_apps }}"
+
+- name: install homebrew cask apps (>= 10.12)
+  homebrew_cask:
+    name: "{{ item }}"
+    state: present
+    install_options: "appdir={{ homebrew_cask_appdir }}"
+  when: "ansible_distribution_version is version('10.12', '>=')"
+  loop: "{{ homebrew_cask_apps_10_12 }}"

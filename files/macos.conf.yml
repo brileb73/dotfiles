@@ -1,0 +1,15 @@
+---
+- defaults:
+    link:
+      create: true
+      force: true
+      glob: true
+      relink: true
+
+- link:
+    ~/.ssh/config: ssh/config
+    ~/.bash_aliases: sh/.bash_aliases
+    ~/.bash_nag: sh/.bash_nag
+    ~/.bashrc: sh/.bashrc
+    ~/.zshrc: sh/.zshrc
+    ~/Library/Application Support/Code/User/settings.json: code/settings.json
