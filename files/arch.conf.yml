@@ -13,3 +13,4 @@
     ~/.bashrc: sh/.bashrc
     # ~/.zshrc: sh/.zshrc
     ~/.config/Code/User/settings.json: code/settings.json
+    ~/.devilspie/vscode.ds: devilspie/vscode.ds
