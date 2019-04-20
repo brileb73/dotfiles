@@ -14,15 +14,16 @@ call plug#begin('~/.vim/plug')
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-github-dashboard'
 
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 Plug 'pearofducks/ansible-vim', { 'do': 'cd ./UltiSnips; ./generate.py' }
+
+Plug 'tpope/vim-commentary'
+
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
 " Initialize plugin system
 call plug#end()
@@ -34,13 +35,12 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
+" fzf.vim
+nmap <leader>f :Files<cr>    " fuzzy find files in the working directory (where you launched Vim from)
+nmap <leader>/ :BLines<cr>   " fuzzy find lines in the current file
+nmap <leader>b :Buffers<cr>  " fuzzy find an open buffer
+nmap <leader>r :Rg           " fuzzy find text in the working directory
+nmap <leader>c :Commands<cr> " fuzzy find Vim commands (like Ctrl-Shift-P in Sublime/Atom/VSC)
 
 " ansible-vim
 au BufRead,BufNewFile */playbooks/*.yml set filetype=yaml.ansible
@@ -103,6 +103,104 @@ set cmdheight=2
 
 " A buffer becomes hidden when it is abandoned
 set hid
+
+" Smaller updatetime for CursorHold & CursorHoldI
+set updatetime=300
+
+" Always show signcolumns
+set signcolumn=yes
+
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+  \ pumvisible() ? "\<C-n>" :
+  \ <SID>check_back_space() ? "\<TAB>" :
+  \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
+" Coc only does snippet and additional edit on confirm.
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Use `[c` and `]c` to navigate diagnostics
+nmap <silent> [c <Plug>(coc-diagnostic-prev)
+nmap <silent> ]c <Plug>(coc-diagnostic-next)
+
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use K to show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if &filetype == 'vim'
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Highlight symbol under cursor on CursorHold
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Remap for rename current word
+nmap <leader>rn <Plug>(coc-rename)
+
+" Remap for format selected region
+vmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
+augroup cocgroup
+  autocmd!
+  " Setup formatexpr specified filetype(s).
+  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+  " Update signature help on jump placeholder
+  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+augroup end
+
+" Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
+vmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
+
+" Remap for do codeAction of current line
+nmap <leader>ac  <Plug>(coc-codeaction)
+" Fix autofix problem of current line
+nmap <leader>qf  <Plug>(coc-fix-current)
+
+" Use `:Format` to format current buffer
+command! -nargs=0 Format :call CocAction('format')
+
+" Use `:Fold` to fold current buffer
+command! -nargs=? Fold :call CocAction('fold', <f-args>)
+
+" Using CocList
+" Show all diagnostics
+nnoremap <silent> <leader><space>a :<C-u>CocList diagnostics<cr>
+" Manage extensions
+nnoremap <silent> <leader><space>e :<C-u>CocList extensions<cr>
+" Show commands
+nnoremap <silent> <leader><space>c :<C-u>CocList commands<cr>
+" Find symbol of current document
+nnoremap <silent> <leader><space>o :<C-u>CocList outline<cr>
+" Search workspace symbols
+nnoremap <silent> <leader><space>s :<C-u>CocList -I symbols<cr>
+" Do default action for next item
+nnoremap <silent> <leader><space>j :<C-u>CocNext<CR>
+" Do default action for previous item
+nnoremap <silent> <leader><space>k :<C-u>CocPrev<CR>
+" Resume latest coc list
+nnoremap <silent> <leader><space>p :<C-u>CocListResume<CR>
 
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent

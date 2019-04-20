@@ -13,6 +13,7 @@ homebrew_packages:
 - jq
 - python3
 - readline
+- ripgrep
 - wget
 
 homebrew_packages_10_12:

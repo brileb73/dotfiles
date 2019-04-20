@@ -31,6 +31,7 @@ npm_packages:
 - eslint
 - gulp
 - serverless
+- vim-node-rpc
 - yarn
 
 vscode_extensions:
