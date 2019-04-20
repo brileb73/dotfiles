@@ -1,5 +1,4 @@
 ---
-# Homebrew
 - name: download homebrew install script
   get_url:
     url: https://raw.githubusercontent.com/Homebrew/install/master/install
@@ -18,6 +17,8 @@
     update_homebrew: yes
   loop:
   - bash
+  - zsh
+  tags:
   - zsh
 
 - name: install homebrew packages

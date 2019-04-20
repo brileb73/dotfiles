@@ -4,12 +4,16 @@
   git:
     repo: https://github.com/robbyrussell/oh-my-zsh
     dest: "{{ oh_my_zsh_path }}"
+  tags:
+  - zsh
 
 - name: change shell to zsh (macos)
   user:
     name: "{{ ansible_user_id }}"
     shell: "{{ homebrew_install_path }}/zsh"
   become: yes
+  tags:
+  - zsh
 
 # Fix bash
 - name: create user bash_profile (macos)

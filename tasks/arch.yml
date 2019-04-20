@@ -4,6 +4,8 @@
     name: "{{ item }}"
     state: present
   loop: "{{ pacman_packages }}"
+  tags:
+  - pacman
 
 - name: start docker
   systemd:
@@ -11,12 +13,16 @@
     state: started
     enabled: true
   become: yes
+  tags:
+  - docker
 
 - name: create docker group
   group:
     name: docker
     state: present
   become: yes
+  tags:
+  - docker
 
 - name: add user to docker group
   user:
@@ -24,3 +30,5 @@
     groups: docker
     append: true
   become: yes
+  tags:
+  - docker

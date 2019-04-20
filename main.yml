@@ -18,13 +18,23 @@
   tasks:
   - include: tasks/ansible-setup.yml
   - include: tasks/dotfiles.yml
+    tags:
+    - dotfiles
 
   - block:
     - include: tasks/homebrew.yml
+      tags:
+      - homebrew
     - include: tasks/macos.yml
     when: ansible_os_family == "Darwin"
+    tags:
+    - macos
 
   - include: tasks/arch.yml
     when: ansible_os_family == "Archlinux"
+    tags:
+    - arch
 
   - include: tasks/vscode.yml
+    tags:
+    - vscode
