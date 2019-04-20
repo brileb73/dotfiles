@@ -20,6 +20,13 @@ pip_packages:
 - troposphere
 - virtualenv
 
+npm_packages:
+- create-react-app
+- eslint
+- gulp
+- serverless
+- yarn
+
 vscode_extensions:
 - dbaeumer.vscode-eslint
 - eamodio.gitlens

@@ -6,3 +6,12 @@
   loop: "{{ pip_packages }}"
   tags:
   - pip
+
+- name: install npm packages
+  npm:
+    name: "{{ item }}"
+    global: yes
+    state: present
+  loop: "{{ npm_packages }}"
+  tags:
+  - npm
