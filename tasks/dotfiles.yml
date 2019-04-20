@@ -6,3 +6,10 @@
 
 - name: execute dotbot
   command: "{{ dotbot_bin }} -d {{ playbook_dir }}/files -c {{ dotbot_config | default(dotbot_default_config) }}"
+
+- name: write oh-my-zsh template
+  template:
+    src: zshrc.oh-my-zsh.j2
+    dest: ~/.zshrc.oh-my-zsh
+  tags:
+  - zsh

@@ -1,2 +1,4 @@
 ---
 dotbot_config: "{{ playbook_dir }}/files/macos.conf.yml"
+
+oh_my_zsh_os_plugin: osx

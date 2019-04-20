@@ -57,10 +57,10 @@ COMPLETION_WAITING_DOTS="true"
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 HIST_STAMPS="yyyy-mm-dd"
 
-# plugins can be found in /usr/share/oh-my-zsh/plugins/*
-# Custom plugins may be added to /usr/share/oh-my-zsh/custom/plugins/
+# plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(archlinux git)
+plugins=(aws git)
 # ================ oh-my-zsh ==========================================
 
 
@@ -69,6 +69,7 @@ source_exist() {
     [[ -f $1 ]] && source $1
 }
 
+source_exist $HOME/.zshrc.oh-my-zsh
 source_exist $ZSH/oh-my-zsh.sh
 source_exist $HOME/.bash_aliases
 source_exist $HOME/.bash_nag

@@ -1,6 +1,8 @@
 ---
 dotbot_config: "{{ playbook_dir }}/files/arch.conf.yml"
 
+oh_my_zsh_os_plugin: archlinux
+
 pacman_packages:
 - chromium
 - devilspie
