@@ -1,0 +1,10 @@
+---
+- name: check vscode is available
+  command: which code
+  register: find_vscode
+
+- name: install vscode extensions
+  vscode_extension:
+    name: "{{ item }}"
+  when: find_vscode.rc == 0
+  loop: "{{ vscode_extensions }}"

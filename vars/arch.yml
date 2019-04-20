@@ -1,2 +1,28 @@
 ---
 dotbot_config: "{{ playbook_dir }}/files/arch.conf.yml"
+
+pacman_packages:
+- chromium
+- devilspie
+- docker
+- docker-compose
+- evince
+- firefox
+- gimp
+- git
+- htop
+- jq
+- mupdf
+- nvm
+- python
+- qrencode
+- slack-desktop
+- spotify
+- terminator
+- transset-df
+- vim
+- visual-studio-code-bin
+- wireguard-arch
+- wireguard-tools
+- xclip
+- xdotool

@@ -6,27 +6,25 @@
   - vars/main.yml
 
   pre_tasks:
-  - include_vars:
-    - vars/homebrew.yml
-    - vars/macos.yml
-    - vars/macos_defaults.yml
+  - block:
+    - include_vars: vars/homebrew.yml
+    - include_vars: vars/macos.yml
+    - include_vars: vars/macos_defaults.yml
     when: ansible_os_family == "Darwin"
-  - include_vars:
-    - vars/arch.yml
+  - block:
+    - include_vars: vars/arch.yml
     when: ansible_os_family == "Archlinux"
 
   tasks:
   - include: tasks/ansible-setup.yml
   - include: tasks/dotfiles.yml
 
-  - include:
-    - tasks/homebrew.yml
-    - tasks/macos.yml
+  - block:
+    - include: tasks/homebrew.yml
+    - include: tasks/macos.yml
     when: ansible_os_family == "Darwin"
-    tags:
-    - osx
 
   - include: tasks/arch.yml
     when: ansible_os_family == "Archlinux"
-    tags:
-    - arch
+
+  - include: tasks/vscode.yml
