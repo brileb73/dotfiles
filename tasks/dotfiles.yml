@@ -13,3 +13,22 @@
     dest: ~/.zshrc.oh-my-zsh
   tags:
   - zsh
+
+- name: create vim pathogen directories
+  file:
+    path: "{{ item }}"
+    state: directory
+    recurse: yes
+  loop:
+  - ~/.vim/autoload
+  - ~/.vim/bundle
+  tags:
+  - vim
+
+- name: download vim pathogen
+  get_url:
+    url: https://tpo.pe/pathogen.vim
+    dest: ~/.vim/autoload/pathogen.vim
+    mode: 0644
+  tags:
+  - vim

@@ -12,4 +12,5 @@
     ~/.bash_nag: sh/.bash_nag
     ~/.bashrc: sh/.bashrc
     ~/.zshrc: sh/.zshrc
+    ~/.vimrc: vim/.vimrc
     ~/Library/Application Support/Code/User/settings.json: code/settings.json

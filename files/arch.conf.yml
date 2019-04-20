@@ -11,5 +11,6 @@
     ~/.bash_aliases: sh/.bash_aliases
     ~/.bashrc: sh/.bashrc
     # ~/.zshrc: sh/.zshrc
+    ~/.vimrc: vim/.vimrc
     ~/.config/Code/User/settings.json: code/settings.json
     ~/.devilspie/vscode.ds: devilspie/vscode.ds
