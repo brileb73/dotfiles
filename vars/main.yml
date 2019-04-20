@@ -7,6 +7,19 @@ dotbot_default_config: "{{ playbook_dir }}/files/arch.conf.yml"
 
 oh_my_zsh_path: ~/.oh-my-zsh
 
+pip_packages:
+- awscli
+- boto3
+- pylint
+- pytz
+- pyyaml
+- requests
+- sceptre
+- six
+- sshuttle
+- troposphere
+- virtualenv
+
 vscode_extensions:
 - dbaeumer.vscode-eslint
 - eamodio.gitlens
