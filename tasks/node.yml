@@ -7,11 +7,22 @@
   - nvm
 
 - name: install node lts
-  command: "bash -ic 'source {{ nvm_path }}/nvm.sh && nvm install --lts'"
+  command: "bash -c 'source {{ nvm_path }}/nvm.sh && nvm install --lts && nvm install npm'"
+  args:
+    creates: "{{ nvm_path }}/versions/node"
   tags:
   - nvm
 
 - name: alias default node
-  command: "bash -ic 'source {{ nvm_path }}/nvm.sh && nvm alias default node'"
+  command: "bash -c 'source {{ nvm_path }}/nvm.sh && nvm alias default node'"
   tags:
   - nvm
+
+- name: find installed npm executable
+  command: "bash -c 'source {{ nvm_path }}/nvm.sh && nvm which npm'"
+  register: nvm_npm
+  tags:
+  - nvm
+
+- debug:
+    msg: "NPM: {{ nvm_npm }}"
