@@ -11,6 +11,7 @@ homebrew_packages:
 - grep
 - htop
 - jq
+- node
 - python3
 - readline
 - ripgrep

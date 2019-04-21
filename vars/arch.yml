@@ -15,7 +15,7 @@ pacman_packages:
 - htop
 - jq
 - mupdf
-- nvm
+- nodejs
 - python
 - qrencode
 - slack-desktop
