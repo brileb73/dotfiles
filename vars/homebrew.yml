@@ -19,7 +19,6 @@ homebrew_packages:
 
 homebrew_packages_10_12:
 - mysql
-- node
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:

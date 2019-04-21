@@ -20,7 +20,7 @@ pip_packages:
 - pytz
 - pyyaml
 - requests
-- sceptre
+# - sceptre
 - six
 - sshuttle
 - troposphere
