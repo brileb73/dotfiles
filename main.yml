@@ -38,6 +38,9 @@
 
   - include: tasks/node.yml
   - include: tasks/packages.yml
+  - include: tasks/vim.yml
+    tags:
+    - vim
   - include: tasks/vscode.yml
     tags:
     - vscode

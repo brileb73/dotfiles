@@ -1,0 +1,29 @@
+---
+- name: create vim directories
+  file:
+    path: "{{ item }}"
+    state: directory
+    recurse: yes
+  loop:
+  - ~/.vim/autoload
+  - ~/.vim/plug
+
+- name: download vim-plug
+  get_url:
+    url: https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    dest: ~/.vim/autoload/plug.vim
+    mode: 0644
+
+- name: install vim-plug
+  command: echo '' | vim +PlugInstall +qall
+
+- name: install vim coc-python
+  command: "echo '' | vim +'CocInstall {{ item }}' +qall"
+  loop:
+  - coc-emmet
+  - coc-highlight
+  - coc-json
+  - coc-python
+  - coc-snippets
+  - coc-tsserver
+  - coc-yaml
