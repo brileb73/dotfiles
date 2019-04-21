@@ -19,7 +19,7 @@
   - nvm
 
 - name: find installed npm executable
-  command: "bash -c 'source {{ nvm_path }}/nvm.sh && nvm which npm'"
+  command: "bash -c 'source {{ nvm_path }}/nvm.sh && nvm exec default which npm'"
   register: nvm_npm
   tags:
   - nvm
