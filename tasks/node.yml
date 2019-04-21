@@ -7,11 +7,11 @@
   - nvm
 
 - name: install node lts
-  command: "{{ nvm_path }}/nvm-exec install --lts"
+  command: "bash -ic 'source {{ nvm_path }}/nvm.sh && nvm install --lts'"
   tags:
   - nvm
 
 - name: alias default node
-  command: "{{ nvm_path }}/nvm-exec alias default node"
+  command: "bash -ic 'source {{ nvm_path }}/nvm.sh && nvm alias default node'"
   tags:
   - nvm
