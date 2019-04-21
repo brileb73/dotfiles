@@ -1,6 +1,4 @@
 ---
-# TODO install oh-my-zsh local to user
-
 - name: check vscode is available
   command: which code
   register: find_vscode

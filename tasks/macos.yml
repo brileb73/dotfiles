@@ -38,6 +38,8 @@
   loop_control:
     label: "{{ item.key }}"
 
+# TODO set iterm defaults if iTerm.app is in /Applications or ~/Applications
+
 - name: set macos defaults (>= 10.12)
   osx_defaults:
     domain: "{{ item.domain }}"
