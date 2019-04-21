@@ -23,6 +23,3 @@
   register: nvm_npm
   tags:
   - nvm
-
-- debug:
-    msg: "NPM: {{ nvm_npm }}"

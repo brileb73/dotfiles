@@ -10,6 +10,7 @@
 - name: install npm packages
   npm:
     name: "{{ item }}"
+    executable: "{{ nvm_npm.stdout_lines[-1] }}"
     global: yes
     state: present
   loop: "{{ npm_packages }}"
