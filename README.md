@@ -12,7 +12,8 @@ OS X:
 1. Install `ansible`: `sudo pip install ansible`
 1. Run `ansible-playbook main.yml -i inventory -K` from the root of this repo
 1. Manual steps:
-  * System Preferences > Keyboard > Modifier Keys > Caps Lock -> Control
+    * System Preferences > Keyboard > Modifier Keys > Caps Lock -> Control
+    * Top Bar Battery Status > Show Percentage
 
 ## Contents
 
