@@ -17,13 +17,13 @@
 - name: install vim-plug
   command: echo '' | vim +PlugInstall +qall
 
-- name: install vim coc-python
-  command: "echo '' | vim +'CocInstall {{ item }}' +qall"
-  loop:
-  - coc-emmet
-  - coc-highlight
-  - coc-json
-  - coc-python
-  - coc-snippets
-  - coc-tsserver
-  - coc-yaml
+# - name: install vim coc plugins
+#   command: "echo '' | vim +'CocInstall {{ item }}' +qall"
+#   loop:
+#   - coc-emmet
+#   - coc-highlight
+#   - coc-json
+#   - coc-python
+#   - coc-snippets
+#   - coc-tsserver
+#   - coc-yaml
