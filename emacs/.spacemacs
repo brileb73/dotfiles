@@ -36,25 +36,32 @@ values."
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
+     ansible
+     auto-completion
+     better-defaults
+     yaml
+     ruby
+     javascript
+     python
+     markdown
      helm
-     ;; auto-completion
-     ;; better-defaults
      emacs-lisp
-     ;; git
-     ;; markdown
-     ;; org
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
-     ;; spell-checking
-     ;; syntax-checking
-     ;; version-control
+     git
+     (shell :variables
+            shell-default-height 20
+            shell-default-position 'bottom)
+     syntax-checking
+     version-control
+     tabbar ;; https://github.com/evacchi/tabbar-layer
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages
+   '(
+     groovy-mode
+     )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -136,7 +143,7 @@ values."
                                :size 13
                                :weight normal
                                :width normal
-                               :powerline-scale 1.1)
+                               :powerline-scale 1.2)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The key used for Emacs commands (M-x) (after pressing on the leader key).
@@ -259,24 +266,24 @@ values."
    ;;                       text-mode
    ;;   :size-limit-kb 1000)
    ;; (default nil)
-   dotspacemacs-line-numbers nil
+   dotspacemacs-line-numbers 'relative
    ;; Code folding method. Possible values are `evil' and `origami'.
    ;; (default 'evil)
    dotspacemacs-folding-method 'evil
    ;; If non-nil smartparens-strict-mode will be enabled in programming modes.
    ;; (default nil)
-   dotspacemacs-smartparens-strict-mode nil
+   dotspacemacs-smartparens-strict-mode 'enable
    ;; If non-nil pressing the closing parenthesis `)' key in insert mode passes
    ;; over any automatically added closing parenthesis, bracket, quote, etc…
    ;; This can be temporary disabled by pressing `C-q' before `)'. (default nil)
-   dotspacemacs-smart-closing-parenthesis nil
+   dotspacemacs-smart-closing-parenthesis 'enable
    ;; Select a scope to highlight delimiters. Possible values are `any',
    ;; `current', `all' or `nil'. Default is `all' (highlight any scope and
    ;; emphasis the current one). (default 'all)
    dotspacemacs-highlight-delimiters 'all
    ;; If non nil, advise quit functions to keep server open when quitting.
    ;; (default nil)
-   dotspacemacs-persistent-server nil
+   dotspacemacs-persistent-server 'enable
    ;; List of search tool executable names. Spacemacs uses the first installed
    ;; tool of the list. Supported tools are `ag', `pt', `ack' and `grep'.
    ;; (default '("ag" "pt" "ack" "grep"))
@@ -290,7 +297,7 @@ values."
    ;; `trailing' to delete only the whitespace at end of lines, `changed'to
    ;; delete only whitespace for changed lines or `nil' to disable cleanup.
    ;; (default nil)
-   dotspacemacs-whitespace-cleanup nil
+   dotspacemacs-whitespace-cleanup 'trailing
    ))
 
 (defun dotspacemacs/user-init ()
@@ -300,10 +307,12 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
+  (add-hook 'prog-mode-hook 'turn-on-fci-mode)
+  (add-hook 'text-mode-hook 'turn-on-fci-mode)
   )
 
 (defun dotspacemacs/user-config ()
-  "Configuration function for user code.
+  "configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
 layers configuration.
 This is the place where most of your configurations should be done. Unless it is
@@ -320,7 +329,208 @@ you should place your code here."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav dumb-jump f s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed dash aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async))))
+    (
+     ac-ispell
+     ace-jump-helm-line
+     ace-link
+     ace-window
+     adaptive-wrap
+     aggressive-indent
+     anaconda-mode
+     ansible
+     ansible-doc
+     anzu
+     async
+     auto-compile
+     auto-complete
+     auto-highlight-symbol
+     auto-yasnippet
+     avy
+     bind-key
+     bind-map
+     bundler
+     chruby
+     clean-aindent-mode
+     coffee-mode
+     column-enforce-mode
+     company
+     company-anaconda
+     company-ansible
+     company-statistics
+     company-tern
+     cython-mode
+     dash
+     dash-functional
+     define-word
+     diff-hl
+     diminish
+     dumb-jump
+     elisp-slime-nav
+     epl
+     esh-help
+     eshell-prompt-extras
+     eshell-z
+     eval-sexp-fu
+     evil
+     evil-anzu
+     evil-args
+     evil-ediff
+     evil-escape
+     evil-exchange
+     evil-iedit-state
+     evil-indent-plus
+     evil-lisp-state
+     evil-magit
+     evil-matchit
+     evil-mc
+     evil-nerd-commenter
+     evil-numbers
+     evil-search-highlight-persist
+     evil-surround
+     evil-tutor
+     evil-unimpaired
+     evil-visual-mark-mode
+     evil-visualstar
+     exec-path-from-shell
+     expand-region
+     eyebrowse
+     f
+     fancy-battery
+     fill-column-indicator
+     flx
+     flx-ido
+     flycheck
+     flycheck-pos-tip
+     fringe-helper
+     fuzzy
+     gh-md
+     git-commit
+     git-gutter
+     git-gutter+
+     git-gutter-fringe
+     git-gutter-fringe+
+     git-link
+     git-messenger
+     git-timemachine
+     gitattributes-mode
+     gitconfig-mode
+     gitignore-mode
+     golden-ratio
+     google-translate
+     goto-chg
+     groovy-mode
+     helm
+     helm-ag
+     helm-c-yasnippet
+     helm-company
+     helm-core
+     helm-descbinds
+     helm-flx
+     helm-gitignore
+     helm-make
+     helm-mode-manager
+     helm-projectile
+     helm-pydoc
+     helm-swoop
+     helm-themes
+     highlight
+     highlight-indentation
+     highlight-numbers
+     highlight-parentheses
+     hl-todo
+     hungry-delete
+     hy-mode
+     hydra
+     iedit
+     indent-guide
+     inf-ruby
+     jinja2-mode
+     js-doc
+     js2-mode
+     js2-refactor
+     json-mode
+     json-reformat
+     json-snatcher
+     link-hint
+     linum-relative
+     live-py-mode
+     livid-mode
+     lorem-ipsum
+     lv
+     macrostep
+     magit
+     magit-gitflow
+     magit-popup
+     markdown-mode
+     markdown-toc
+     minitest
+     mmm-mode
+     move-text
+     multi-term
+     multiple-cursors
+     mwim
+     neotree
+     open-junk-file
+     org-bullets
+     org-plus-contrib
+     orgit
+     packed
+     paradox
+     parent-mode
+     pcre2el
+     persp-mode
+     pip-requirements
+     pkg-info
+     popup
+     popwin
+     pos-tip
+     powerline
+     projectile
+     py-isort
+     pyenv-mode
+     pytest
+     pythonic
+     pyvenv
+     rainbow-delimiters
+     rake
+     rbenv
+     request
+     restart-emacs
+     robe
+     rspec-mode
+     rubocop
+     ruby-test-mode
+     ruby-tools
+     rvm
+     s
+     shell-pop
+     simple-httpd
+     skewer-mode
+     smartparens
+     smeargle
+     spaceline
+     spinner
+     tabbar
+     tern
+     toc-org
+     transient
+     undo-tree
+     use-package
+     uuidgen
+     vi-tilde-fringe
+     volatile-highlights
+     web-beautify
+     which-key
+     winum
+     with-editor
+     ws-butler
+     xterm-color
+     yaml-mode
+     yapfify
+     yasnippet
+     unfill
+     )))
+ '(tabbar-separator (quote (0.5))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
