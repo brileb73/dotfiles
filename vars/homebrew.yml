@@ -25,6 +25,7 @@ homebrew_cask_apps:
 - docker
 - emacs
 - firefox
+- font-source-code-pro
 - google-chrome
 - macvim
 - slack

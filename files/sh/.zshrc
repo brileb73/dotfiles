@@ -73,6 +73,7 @@ source_exist $HOME/.zshrc.oh-my-zsh
 source_exist $ZSH/oh-my-zsh.sh
 source_exist $HOME/.bash_aliases
 source_exist $HOME/.bash_nag
+source_exist $HOME/.fzf.zsh
 source_exist /usr/share/nvm/init-nvm.sh
 # ================ common-files =======================================
 
@@ -83,3 +84,15 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="$PATH:$HOME/.gem/ruby/bin"
 # ================ exports ============================================
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/brian.leblanc/.nvm/versions/node/v10.15.3/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/brian.leblanc/.nvm/versions/node/v10.15.3/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/brian.leblanc/.nvm/versions/node/v10.15.3/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/brian.leblanc/.nvm/versions/node/v10.15.3/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /Users/brian.leblanc/.nvm/versions/node/v10.15.3/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/brian.leblanc/.nvm/versions/node/v10.15.3/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh

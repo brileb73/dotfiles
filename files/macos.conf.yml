@@ -11,6 +11,7 @@
     ~/.bash_aliases: sh/.bash_aliases
     ~/.bash_nag: sh/.bash_nag
     ~/.bashrc: sh/.bashrc
+    ~/.spacemacs: emacs/.spacemacs
     ~/.zshrc: sh/.zshrc
     ~/.vimrc: vim/.vimrc
     ~/Library/Application Support/Code/User/settings.json: code/settings.json

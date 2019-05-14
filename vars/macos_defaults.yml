@@ -104,7 +104,7 @@ macos_defaults:
   type: int
   value: 12
 - domain: com.apple.dock
-  key: wvous-tr-corner
+  key: wvous-tl-corner
   type: int
   value: 5
 

@@ -7,7 +7,7 @@
   - nvm
 
 - name: install node lts
-  command: "bash -c 'source {{ nvm_path }}/nvm.sh && nvm install --lts && nvm install npm'"
+  command: "bash -c 'source {{ nvm_path }}/nvm.sh && nvm install --lts'"
   args:
     creates: "{{ nvm_path }}/versions/node"
   tags:

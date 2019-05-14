@@ -23,7 +23,7 @@ Plug 'pearofducks/ansible-vim', { 'do': 'cd ./UltiSnips; ./generate.py' }
 
 Plug 'tpope/vim-commentary'
 
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', { 'do': { -> coc#util#install()} }
 
 " Initialize plugin system
 call plug#end()

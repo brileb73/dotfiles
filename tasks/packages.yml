@@ -3,16 +3,24 @@
   pip:
     name: "{{ item }}"
     state: present
+    extra_args: --ignore-installed six
   loop: "{{ pip_packages }}"
+  become: yes
   tags:
   - pip
 
+# - name: install npm packages
+#   npm:
+#     name: "{{ item }}"
+#     executable: "{{ nvm_npm.stdout_lines[-1] }}"
+#     global: yes
+#     state: present
+#   loop: "{{ npm_packages }}"
+#   tags:
+#   - npm
+
 - name: install npm packages
-  npm:
-    name: "{{ item }}"
-    executable: "{{ nvm_npm.stdout_lines[-1] }}"
-    global: yes
-    state: present
+  command: "bash -c 'source {{ nvm_path }}/nvm.sh && npm install --global {{ item }}'"
   loop: "{{ npm_packages }}"
   tags:
   - npm
