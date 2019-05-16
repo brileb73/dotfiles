@@ -25,7 +25,7 @@ homebrew_cask_apps:
 - docker
 - emacs
 - firefox
-- font-source-code-pro
+# - font-source-code-pro # TODO tap homebrew/cask-fonts first
 - google-chrome
 - gpg-suite
 - macvim
