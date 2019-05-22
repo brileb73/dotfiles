@@ -21,16 +21,17 @@ homebrew_packages_10_12:
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
+# - font-source-code-pro # TODO tap homebrew/cask-fonts first
 - chromedriver
 - docker
 - emacs
 - firefox
-# - font-source-code-pro # TODO tap homebrew/cask-fonts first
 - google-chrome
 - gpg-suite
 - macvim
 - slack
 - spotify
+- tunnelblick
 - visual-studio-code
 
 homebrew_cask_apps_10_12:

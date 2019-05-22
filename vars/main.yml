@@ -14,14 +14,15 @@ oh_my_zsh_plugins:
 nvm_path: ~/.nvm
 
 pip_packages:
+# - sceptre
 - awscli
 - boto3
 - pylint
 - pytz
 - pyyaml
 - requests
-# - sceptre
 - six
+- softlayer
 - sshuttle
 - troposphere
 - virtualenv
