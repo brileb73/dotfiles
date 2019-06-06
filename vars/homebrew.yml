@@ -36,3 +36,4 @@ homebrew_cask_apps:
 
 homebrew_cask_apps_10_12:
 - iterm2
+- karabiner-elements

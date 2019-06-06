@@ -17,6 +17,7 @@ pip_packages:
 # - sceptre
 - awscli
 - boto3
+- pep8
 - pylint
 - pytz
 - pyyaml

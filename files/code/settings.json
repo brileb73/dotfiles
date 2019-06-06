@@ -19,10 +19,14 @@
     "gitProjectManager.maxDepthRecursion": 2,
     "python.pythonPath": "python",
     "python.venvPath": "~/venvs",
+    "python.linting.pep8Args": [
+        "--max-line-length=500"
+    ],
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "window.zoomLevel": -1,
     "[python]": {
         "editor.tabSize": 4
-    }
+    },
+    "editor.multiCursorModifier": "alt"
 }

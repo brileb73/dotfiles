@@ -1,0 +1,9 @@
+[alias]
+    s = status
+    st = status
+    co = checkout
+    br = branch
+    ci = commit
+    unstage = reset HEAD --
+    get = clone
+    root = rev-parse --show-toplevel

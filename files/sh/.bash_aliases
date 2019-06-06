@@ -16,8 +16,8 @@ fi
 alias ll='ls -l'
 alias la='ls -la'
 alias l='ls -lah'
-alias get_ips='$HOME/repo/brians-stupid-scripts/get_ips.py'
 alias cdd='cd $HOME/Downloads'
+alias cdg='cd $HOME/git'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -64,17 +64,6 @@ vim() {
   start_nvm
   vim "$@"
 }
-
-#======================================================================
-# CFNWatcher integration w/ aws cli
-#======================================================================
-#aws() {
-#  if [[ "$1" == "cloudformation" ]]; then
-#    cfnwatcher ${@:2}
-#  else
-#    aws $@
-#  fi
-#}
 
 #======================================================================
 # Compressed File Extraction

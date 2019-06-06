@@ -163,7 +163,7 @@
 	gAKACoAN0xAJChEVGVdOUy5rZXlzoxITFIADgASABaMWFxiABoAHgAiACVpJZGVudGlm
 	aWVyVVdpZHRoVkhpZGRlblEwI0BowAAAAAAACNIhIiMkWiRjbGFzc25hbWVYJGNsYXNz
 	ZXNcTlNEaWN0aW9uYXJ5oiMlWE5TT2JqZWN00xAJCicrGaMSExSAA4AEgAWjLC0YgAuA
-	DIAIgAlRMSNAdKGdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
+	DIAIgAlRMSNAc7Gdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
 	TlNLZXllZEFyY2hpdmVy0Tg5VUFycmF5gAEACAARABoAIwAtADIANwBGAEwAUQBcAGMA
 	ZgBoAGoAbABzAHsAfwCBAIMAhQCJAIsAjQCPAJEAnACiAKkAqwC0ALUAugDFAM4A2wDe
 	AOcA7gDyAPQA9gD4APwA/gEAAQIBBAEGAQ8BFAEjAScBLwFBAUQBSgAAAAAAAAIBAAAA
@@ -180,9 +180,11 @@
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>269 167 770 429 0 0 1680 1027 </string>
+	<string>3686 532 1016 512 3600 170 1080 1897 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 698 1680 329 0 0 1680 1027 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>3966 1670 570 351 3600 170 1080 1897 </string>
 	<key>NeverWarnAboutShortLivedSessions_92367FE7-AFC1-482C-ADBA-9855F3314878</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_92367FE7-AFC1-482C-ADBA-9855F3314878_selection</key>
@@ -520,6 +522,20 @@
 					<key>Text</key>
 					<string>0x7f</string>
 				</dict>
+				<key>0x45-0x60000</key>
+				<dict>
+					<key>Action</key>
+					<integer>29</integer>
+					<key>Text</key>
+					<string>92367FE7-AFC1-482C-ADBA-9855F3314878</string>
+				</dict>
+				<key>0x4f-0x60000</key>
+				<dict>
+					<key>Action</key>
+					<integer>28</integer>
+					<key>Text</key>
+					<string>92367FE7-AFC1-482C-ADBA-9855F3314878</string>
+				</dict>
 				<key>0xf700-0x220000</key>
 				<dict>
 					<key>Action</key>
@@ -544,9 +560,9 @@
 				<key>0xf700-0x280000</key>
 				<dict>
 					<key>Action</key>
-					<integer>11</integer>
+					<integer>20</integer>
 					<key>Text</key>
-					<string>0x1b 0x1b 0x5b 0x41</string>
+					<string></string>
 				</dict>
 				<key>0xf701-0x220000</key>
 				<dict>
@@ -572,9 +588,9 @@
 				<key>0xf701-0x280000</key>
 				<dict>
 					<key>Action</key>
-					<integer>11</integer>
+					<integer>21</integer>
 					<key>Text</key>
-					<string>0x1b 0x1b 0x5b 0x42</string>
+					<string></string>
 				</dict>
 				<key>0xf702-0x220000</key>
 				<dict>
@@ -600,9 +616,9 @@
 				<key>0xf702-0x280000</key>
 				<dict>
 					<key>Action</key>
-					<integer>11</integer>
+					<integer>18</integer>
 					<key>Text</key>
-					<string>0x1b 0x1b 0x5b 0x44</string>
+					<string></string>
 				</dict>
 				<key>0xf703-0x220000</key>
 				<dict>
@@ -628,9 +644,9 @@
 				<key>0xf703-0x280000</key>
 				<dict>
 					<key>Action</key>
-					<integer>11</integer>
+					<integer>19</integer>
 					<key>Text</key>
-					<string>0x1b 0x1b 0x5b 0x43</string>
+					<string></string>
 				</dict>
 				<key>0xf704-0x20000</key>
 				<dict>
@@ -2873,8 +2889,10 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-05-17T12:15:24Z</date>
+	<date>2019-05-30T11:53:02Z</date>
 	<key>SUSendProfileInfo</key>
+	<false/>
+	<key>Secure Input</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
 	<true/>
