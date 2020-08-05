@@ -5,3 +5,6 @@
 # ansible
 config.yml
 *.retry
+
+# macos
+.DS_Store

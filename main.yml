@@ -36,7 +36,7 @@
     tags:
     - arch
 
-  - include: tasks/node.yml
+  # - include: tasks/node.yml
   - include: tasks/packages.yml
   - include: tasks/vim.yml
     tags:

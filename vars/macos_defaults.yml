@@ -102,7 +102,7 @@ macos_defaults:
 - domain: com.apple.dock
   key: wvous-tr-corner
   type: int
-  value: 12
+  value: 0
 - domain: com.apple.dock
   key: wvous-tl-corner
   type: int

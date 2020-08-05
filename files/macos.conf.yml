@@ -14,4 +14,7 @@
     ~/.spacemacs: emacs/.spacemacs
     ~/.zshrc: sh/.zshrc
     ~/.vimrc: vim/.vimrc
+    ~/.yabairc: yabai/.yabairc
+    ~/.skhdrc: yabai/.skhdrc
+    ~/Library/Scripts/new_iterm_window.scpt: yabai/new_iterm_window.scpt
     ~/Library/Application Support/Code/User/settings.json: code/settings.json

@@ -47,23 +47,23 @@ nvm() {
   nvm "$@"
 }
 
-node() {
-  unset -f node
-  start_nvm
-  node "$@"
-}
-
-npm() {
-  unset -f npm
-  start_nvm
-  npm "$@"
-}
-
-vim() {
-  unset -f vim
-  start_nvm
-  vim "$@"
-}
+#node() {
+#  unset -f node
+#  start_nvm
+#  node "$@"
+#}
+#
+#npm() {
+#  unset -f npm
+#  start_nvm
+#  npm "$@"
+#}
+#
+#vim() {
+#  unset -f vim
+#  start_nvm
+#  vim "$@"
+#}
 
 #======================================================================
 # Compressed File Extraction
@@ -94,13 +94,13 @@ extract () {
 #======================================================================
 # Compatibility for shell to update env vars
 #======================================================================
-awscache() {
-  eval `$HOME/repo/brians-stupid-scripts/awscache.py $@`
-}
+#awscache() {
+#  eval `$HOME/repo/brians-stupid-scripts/awscache.py $@`
+#}
 
 #======================================================================
 # Fucking SSH usernames goddamn
 #======================================================================
 login() {
-  ssh $@ || ssh -l bleblanc $@
+  ssh $@ || ssh -l brian.leblanc $@
 }

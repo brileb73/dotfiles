@@ -10,7 +10,6 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
-    "gitlens.codeLens.enabled": false,
     "gitlens.hovers.currentLine.enabled": false,
     "gitProjectManager.baseProjectsFolders": [
         "~/git",
@@ -19,7 +18,7 @@
     "gitProjectManager.maxDepthRecursion": 2,
     "python.pythonPath": "python",
     "python.venvPath": "~/venvs",
-    "python.linting.pep8Args": [
+    "python.linting.pycodestyleArgs": [
         "--max-line-length=500"
     ],
     "telemetry.enableCrashReporter": false,
@@ -28,5 +27,6 @@
     "[python]": {
         "editor.tabSize": 4
     },
-    "editor.multiCursorModifier": "alt"
+    "editor.multiCursorModifier": "alt",
+    "gitlens.codeLens.enabled": false
 }

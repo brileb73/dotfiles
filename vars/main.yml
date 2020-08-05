@@ -10,11 +10,11 @@ oh_my_zsh_theme: gallois
 oh_my_zsh_plugins:
 - aws
 - git
+- shrink-path
 
 nvm_path: ~/.nvm
 
 pip_packages:
-# - sceptre
 - awscli
 - boto3
 - pep8
@@ -23,7 +23,6 @@ pip_packages:
 - pyyaml
 - requests
 - six
-- softlayer
 - sshuttle
 - troposphere
 - virtualenv
@@ -41,13 +40,14 @@ vscode_extensions:
 - eamodio.gitlens
 - felipecaputo.git-project-manager
 - formulahendry.auto-rename-tag
+- github.vscode-pull-request-github
+- golang.Go
+- hashicorp.terraform
 - James-Yu.latex-workshop
 - kesmarag.base16-tomorrow-night
-- mauve.terraform
+- ms-azuretools.vscode-docker
 - ms-python.python
-- ms-vscode.Go
 - msjsdiag.debugger-for-chrome
-- PeterJausovec.vscode-docker
 - rebornix.ruby
 - redhat.vscode-yaml
 - Tyriar.sort-lines

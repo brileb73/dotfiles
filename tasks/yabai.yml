@@ -1,0 +1,23 @@
+---
+- name: install yabai & skhd
+  homebrew:
+    name: "{{ item }}"
+    state: present
+  loop:
+  - koekeishiya/formulae/yabai
+  - koekeishiya/formulae/skhd
+
+- name: install yabai scripting additions
+  command: yabai --install-sa
+  become: yes
+
+- name: start yabai & skhd
+  homebrew_services:
+    name: "{{ item }}"
+    state: started
+  loop:
+  - yabai
+  - skhd
+
+- name: restart dock
+  command: killall Dock

@@ -1,0 +1,8 @@
+---
+- hosts: all
+  connection: local
+
+  tasks:
+  - include: tasks/yabai.yml
+    tags:
+    - yabai

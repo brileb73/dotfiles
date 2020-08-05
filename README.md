@@ -13,6 +13,11 @@ OS X:
 1. Run `ansible-playbook main.yml -i inventory -K` from the root of this repo
 1. Manual steps:
     * System Preferences > Keyboard > Modifier Keys > Caps Lock -> Control
+    * System Preferences > Accessibility > Display > Reduce Motion: true (ensure checked)
+    * System Preferences > Mission Control > Automatically rearrange Spaces based on most recent use: false (ensure unchecked)
+    * System Preferences > Mission Control > Displays have separate Spaces: true (ensure checked)
+    * System Preferences > Keyboard > Shortcuts > Mission Control > "Switch to Desktop [0-9]": true (ensure checked)
+    * System Preferences > Keyboard > Text > `+`: `shrugmoji ¯\_(ツ)_/¯`
     * Top Bar Battery Status > Show Percentage
 
 ## Contents

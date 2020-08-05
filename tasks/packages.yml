@@ -9,18 +9,20 @@
   tags:
   - pip
 
+- name: install npm packages
+  npm:
+    name: "{{ item }}"
+    # executable: "{{ nvm_npm.stdout_lines[-1] }}"
+    global: yes
+    state: present
+  loop: "{{ npm_packages }}"
+  become: yes
+  tags:
+  - npm
+
 # - name: install npm packages
-#   npm:
-#     name: "{{ item }}"
-#     executable: "{{ nvm_npm.stdout_lines[-1] }}"
-#     global: yes
-#     state: present
+#   command: "bash -c 'source {{ nvm_path }}/nvm.sh && npm install --global {{ item }}'"
 #   loop: "{{ npm_packages }}"
 #   tags:
 #   - npm
-
-- name: install npm packages
-  command: "bash -c 'source {{ nvm_path }}/nvm.sh && npm install --global {{ item }}'"
-  loop: "{{ npm_packages }}"
-  tags:
-  - npm
+#   - nvm
