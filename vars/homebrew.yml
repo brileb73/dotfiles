@@ -20,11 +20,11 @@ homebrew_packages:
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
+# - emacs # TODO fix emacs with yabai: https://github.com/koekeishiya/yabai/wiki/Tips-and-tricks#tiling-emacs
 # - font-source-code-pro # TODO tap homebrew/cask-fonts first
 - authy
 - chromedriver
 - docker
-- emacs
 - firefox
 - google-chrome
 - gpg-suite
