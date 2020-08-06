@@ -4,6 +4,8 @@ homebrew_install_path: /usr/local/bin
 
 homebrew_packages:
 - autoconf
+- docker
+- docker-compose
 - gcc
 - gettext
 - git
@@ -21,11 +23,11 @@ homebrew_packages:
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
 # - emacs # TODO fix emacs with yabai: https://github.com/koekeishiya/yabai/wiki/Tips-and-tricks#tiling-emacs
-# - font-source-code-pro # TODO tap homebrew/cask-fonts first
 - authy
 - chromedriver
-- docker
 - firefox
+- font-fontawesome
+- font-source-code-pro
 - google-chrome
 - gpg-suite
 - iterm2

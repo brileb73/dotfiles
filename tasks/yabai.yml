@@ -6,6 +6,7 @@
   loop:
   - koekeishiya/formulae/yabai
   - koekeishiya/formulae/skhd
+  - cmacrae/formulae/spacebar
 
 - name: install yabai scripting additions
   command: yabai --install-sa
@@ -18,6 +19,7 @@
   loop:
   - yabai
   - skhd
+  - spacebar
 
 - name: restart dock
   command: killall Dock
