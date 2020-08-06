@@ -26,3 +26,11 @@
 #   tags:
 #   - npm
 #   - nvm
+
+- name: install gem packages
+  gem:
+    name: "{{ item }}"
+    user_install: no
+    state: present
+  become: yes
+  loop: "{{ gem_packages }}"

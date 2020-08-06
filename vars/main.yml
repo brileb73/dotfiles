@@ -85,6 +85,10 @@ npm_packages:
 - vim-node-rpc
 - yarn
 
+gem_packages:
+- docker-sync
+- rake
+
 vscode_extensions:
 - dbaeumer.vscode-eslint
 - eamodio.gitlens
