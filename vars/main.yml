@@ -12,6 +12,56 @@ oh_my_zsh_plugins:
 - git
 - shrink-path
 
+git_config_globals:
+- name: user.name
+  value: Brian LeBlanc
+- name: fetch.prune
+  value: 'true'
+- name: push.followTags
+  value: 'true'
+- name: log.mailmap
+  value: 'true'
+- name: pull.rebase
+  value: 'true'
+- name: stash.showPatch
+  value: 'true'
+
+git_aliases:
+- alias: a
+  command: add .
+- alias: s
+  command: status
+- alias: st
+  command: status
+- alias: co
+  command: checkout
+- alias: br
+  command: branch
+- alias: c
+  command: commit
+- alias: ci
+  command: commit
+- alias: unstage
+  command: reset HEAD --
+- alias: get
+  command: clone
+- alias: root
+  command: rev-parse --show-toplevel
+- alias: lol
+  command: log --graph --oneline
+- alias: lola
+  command: log --graph --oneline --all
+- alias: in
+  command: fetch --all
+- alias: out
+  command: push
+- alias: outf
+  command: push --force-with-lease
+- alias: good
+  command: bisect good
+- alias: bad
+  command: bisect bad
+
 nvm_path: ~/.nvm
 
 pip_packages:

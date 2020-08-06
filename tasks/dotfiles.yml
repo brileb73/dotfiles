@@ -13,3 +13,17 @@
     dest: ~/.zshrc.oh-my-zsh
   tags:
   - zsh
+
+- name: set global git config values
+  git_config:
+    name: "{{ item.name }}"
+    value: "{{ item.value }}"
+    scope: global
+  loop: "{{ git_config_globals }}"
+
+- name: set global git aliases
+  git_config:
+    name: "alias.{{ item.alias }}"
+    value: "{{ item.command }}"
+    scope: global
+  loop: "{{ git_aliases }}"

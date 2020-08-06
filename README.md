@@ -11,7 +11,7 @@ OS X:
 3. Install `pip`: `curl https://bootstrap.pypa.io/get-pip.py | sudo python`
 4. Install `ansible`: `sudo pip install ansible`
 5. Run `ansible-playbook main.yml -i inventory -K` from the root of this repo
-6. **Optional** To install and start yabai: `ansible-playbook yabai.yml -i inventory -K`
+6. **Optional:** To install and start yabai: `ansible-playbook yabai.yml -i inventory -K`
 7. Manual steps:
     * System Preferences > Keyboard > Modifier Keys > Caps Lock -> Control
     * System Preferences > Accessibility > Display > Reduce Motion: true (ensure checked)
