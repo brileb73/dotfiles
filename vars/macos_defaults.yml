@@ -134,7 +134,6 @@ macos_defaults:
   type: bool
   value: false
 
-macos_defaults_10_12:
 # iTerm2 save config to dotfiles
 - domain: com.googlecode.iterm2
   key: PrefsCustomFolder

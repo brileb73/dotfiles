@@ -81,5 +81,5 @@ source_exist /usr/share/nvm/init-nvm.sh
 # ================ exports ============================================
 export ARCHFLAGS="-arch x86_64"
 export SSH_KEY_PATH="~/.ssh/rsa_id"
-export PATH="$HOME/bin:$HOME/.yarn/bin:/usr/local/bin:$PATH:$HOME/.gem/ruby/bin"
+export PATH="$HOME/bin:$HOME/.yarn/bin:/usr/local/bin:$PATH:$HOME/.gem/ruby/bin:/usr/local/opt/postgresql@9.6/bin"
 # ================ exports ============================================

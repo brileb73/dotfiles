@@ -37,16 +37,3 @@
   loop: "{{ macos_defaults }}"
   loop_control:
     label: "{{ item.key }}"
-
-# TODO set iterm defaults if iTerm.app is in /Applications or ~/Applications
-
-- name: set macos defaults (>= 10.12)
-  osx_defaults:
-    domain: "{{ item.domain }}"
-    key: "{{ item.key }}"
-    state: present
-    type: "{{ item.type }}"
-    value: "{{ item.value }}"
-  loop: "{{ macos_defaults_10_12 }}"
-  loop_control:
-    label: "{{ item.key }}"
