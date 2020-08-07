@@ -13,12 +13,17 @@ homebrew_packages:
 - grep
 - htop
 - jq
+- memcached
 - mysql
 - node@12
+- postgresql@9.6
 - python3
 - readline
 - ripgrep
 - wget
+
+homebrew_taps:
+- homebrew/cask-fonts
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:

@@ -13,7 +13,8 @@
     "gitlens.hovers.currentLine.enabled": false,
     "gitProjectManager.baseProjectsFolders": [
         "~/git",
-        "~/opt"
+        "~/opt",
+        "~/.dotfiles"
     ],
     "gitProjectManager.maxDepthRecursion": 2,
     "python.pythonPath": "python",

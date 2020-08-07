@@ -27,11 +27,10 @@
     state: present
   loop: "{{ homebrew_packages }}"
 
-- name: tap homebrew repos
+- name: tap homebrew taps
   homebrew_tap:
     name: "{{ item }}"
-  loop:
-  - homebrew/cask-fonts
+  loop: "{{ homebrew_taps }}"
 
 - name: install homebrew cask apps
   homebrew_cask:

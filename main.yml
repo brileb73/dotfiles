@@ -8,9 +8,13 @@
   pre_tasks:
   - block:
     - include_vars: vars/homebrew.yml
+      tags:
+      - homebrew
     - include_vars: vars/macos.yml
     - include_vars: vars/macos_defaults.yml
     when: ansible_os_family == "Darwin"
+    tags:
+    - macos
 
   - block:
     - include_vars: vars/arch.yml
