@@ -31,6 +31,7 @@ homebrew_cask_apps:
 - firefox
 - font-fontawesome
 - font-source-code-pro
+- gimp
 - google-chrome
 - gpg-suite
 - iterm2
