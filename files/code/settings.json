@@ -29,5 +29,6 @@
         "editor.tabSize": 4
     },
     "editor.multiCursorModifier": "alt",
-    "gitlens.codeLens.enabled": false
+    "gitlens.codeLens.enabled": false,
+    "workbench.iconTheme": "vscode-icons"
 }
