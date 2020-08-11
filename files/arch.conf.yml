@@ -7,7 +7,7 @@
       relink: true
 
 - link:
-    ~/.ssh/config: ssh/config
+    ~/.ssh/config: ssh/main
     ~/.bash_aliases: sh/.bash_aliases
     ~/.bashrc: sh/.bashrc
     # ~/.zshrc: sh/.zshrc

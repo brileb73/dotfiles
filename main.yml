@@ -15,10 +15,13 @@
     when: ansible_os_family == "Darwin"
     tags:
     - macos
+    - dotfiles
 
   - block:
     - include_vars: vars/arch.yml
     when: ansible_os_family == "Archlinux"
+    tags:
+    - dotfiles
 
   tasks:
   - include: tasks/ansible-setup.yml

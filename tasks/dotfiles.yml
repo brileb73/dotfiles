@@ -7,6 +7,12 @@
 - name: execute dotbot
   command: "{{ dotbot_bin }} -d {{ playbook_dir }}/files -c {{ dotbot_config | default(dotbot_default_config) }}"
 
+- name: generate ssh config
+  copy:
+    src: ssh/config
+    dest: ~/.ssh/config
+    force: no
+
 - name: write oh-my-zsh template
   template:
     src: zshrc.oh-my-zsh.j2

@@ -1,4 +1,1 @@
-Host *
-    UserKnownHostsFile /dev/null
-    StrictHostKeyChecking no
-    LogLevel ERROR
+Include ~/.ssh/config.d/main
