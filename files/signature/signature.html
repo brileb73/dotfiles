@@ -5,14 +5,6 @@
       font-size: small;
     }
 
-    table {
-      width: 100%;
-    }
-
-    td {
-      width: fit-content;
-    }
-
     img {
       height: 32px;
     }
@@ -25,18 +17,17 @@
 
     .vertical {
       margin: 0 5px;
-      border-left: 5px solid #3e373b;
+      border-left: 2px solid #3e373b;
       height: 40px;
     }
 
-    .introhive {
-      padding-right: 5px;
-      float: right;
+    .horizontal {
+      border-bottom: 2px solid #3e373b;
+      width: 100%;
     }
   </style>
 </head>
 <body>
-  <hr>
   <table>
     <tbody>
       <tr>
@@ -52,9 +43,14 @@
           <br />
           DevOps&nbsp;Engineer
         </td>
-        <td style="width: 100%;">
-          <!-- introhive.gif : linking to G Suite company logo -->
-          <img class="introhive" src="https://www.google.com/a/cpanel/introhive.com/images/logo.gif?service=google_gsuite" alt="Introhive" />
+      </tr>
+      <tr>
+        <td colspan="3" style="text-align: center;">
+          <div class="horizontal"></div>
+          <a href="https://www.introhive.ai" target="_blank" rel="noopener noreferrer">
+            <!-- introhive.gif : linking to G Suite company logo -->
+            <img class="introhive" src="https://www.google.com/a/cpanel/introhive.com/images/logo.gif?service=google_gsuite" alt="Introhive" />
+          </a>
         </td>
       </tr>
     </tbody>
