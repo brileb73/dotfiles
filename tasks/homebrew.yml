@@ -21,16 +21,16 @@
   tags:
   - zsh
 
+- name: tap homebrew taps
+  homebrew_tap:
+    name: "{{ item }}"
+  loop: "{{ homebrew_taps }}"
+
 - name: install homebrew packages
   homebrew:
     name: "{{ item }}"
     state: present
   loop: "{{ homebrew_packages }}"
-
-- name: tap homebrew taps
-  homebrew_tap:
-    name: "{{ item }}"
-  loop: "{{ homebrew_taps }}"
 
 - name: install homebrew cask apps
   homebrew_cask:

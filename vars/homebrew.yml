@@ -2,6 +2,10 @@
 homebrew_install_script: "{{ downloads }}/homebrew_install"
 homebrew_install_path: /usr/local/bin
 
+homebrew_taps:
+- homebrew/cask-fonts
+- weaveworks/tap
+
 homebrew_packages:
 - autoconf
 - docker
@@ -18,11 +22,8 @@ homebrew_packages:
 - python3
 - readline
 - ripgrep
+- weaveworks/tap/eksctl
 - wget
-
-homebrew_taps:
-- homebrew/cask-fonts
-- weaveworks/tap
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
@@ -41,4 +42,3 @@ homebrew_cask_apps:
 - spotify
 - tunnelblick
 - visual-studio-code
-- weaveworks/tap/eksctl
