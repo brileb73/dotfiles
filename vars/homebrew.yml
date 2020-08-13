@@ -22,6 +22,7 @@ homebrew_packages:
 
 homebrew_taps:
 - homebrew/cask-fonts
+- weaveworks/tap
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
@@ -40,3 +41,4 @@ homebrew_cask_apps:
 - spotify
 - tunnelblick
 - visual-studio-code
+- weaveworks/tap/eksctl
