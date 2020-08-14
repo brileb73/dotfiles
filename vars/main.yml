@@ -65,7 +65,7 @@ git_aliases:
 nvm_path: ~/.nvm
 
 pip_packages:
-- awscli
+# - awscli # v2 isn't getting published on pip because apparently that's too easy
 - boto3
 - pep8
 - pylint
