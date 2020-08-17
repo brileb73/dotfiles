@@ -5,6 +5,7 @@
 #======================================================================
 export VISUAL='vim'
 export EDITOR=$VISUAL
+export AWS_PAGER=''  # disable awscli paging in less by default
 
 if $(ls --color=auto &>/dev/null); then
   alias ls='ls --color=auto'
