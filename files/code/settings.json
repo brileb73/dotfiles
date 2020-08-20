@@ -30,5 +30,12 @@
     },
     "editor.multiCursorModifier": "alt",
     "gitlens.codeLens.enabled": false,
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "vscode-icons",
+    "window.menuBarVisibility": "default",
+    "vsicons.dontShowNewVersionMessage": true,
+    "editor.fontSize": 12,
+    "debug.console.fontSize": 12,
+    "markdown.preview.fontSize": 12,
+    "terminal.integrated.fontSize": 12,
+    "javascript.updateImportsOnFileMove.enabled": "always"
 }

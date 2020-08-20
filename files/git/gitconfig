@@ -4,6 +4,10 @@
     co = checkout
     br = branch
     ci = commit
+    in = fetch --all
+    out = push
+    lol = log --graph --oneline
+    lola = log --graph --oneline --all
     unstage = reset HEAD --
     get = clone
     root = rev-parse --show-toplevel
