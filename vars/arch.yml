@@ -23,7 +23,6 @@ pacman_packages:
 - transset-df
 - vim
 - visual-studio-code-bin
-- wireguard-arch
 - wireguard-tools
 - xclip
 - xdotool

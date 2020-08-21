@@ -86,7 +86,6 @@ npm_packages:
 - yarn
 
 gem_packages:
-- docker-sync
 - rake
 
 vscode_extensions:
