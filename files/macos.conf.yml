@@ -13,6 +13,7 @@
     ~/.bashrc: sh/.bashrc
     ~/.spacemacs: emacs/.spacemacs
     ~/.zshrc: sh/.zshrc
+    ~/.zsh_custom/themes/bleblanc.zsh-theme: sh/bleblanc.zsh-theme
     ~/.vimrc: vim/.vimrc
     ~/.yabairc: yabai/.yabairc
     ~/.skhdrc: yabai/.skhdrc

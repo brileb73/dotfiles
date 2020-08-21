@@ -38,8 +38,11 @@ export WORDCHARS="*?[]~=;!#$%^(){}<>"
 # Path to oh-my-zsh installation
 export ZSH="$HOME/.oh-my-zsh"
 
+# Path to custom plugins and themes for oh-my-zsh
+export ZSH_CUSTOM="$HOME/.zsh_custom"
+
 # Set name of the theme to load, can also be "random"
-ZSH_THEME="gallois"
+export ZSH_THEME="bleblanc"
 
 # Hyphen-insensitive completion. Case sensitive completion must be off.
 # _ and - will be interchangeable.
