@@ -22,14 +22,14 @@
 
 - name: set global git config values
   git_config:
-    name: "{{ item.name }}"
+    name: "{{ item.key }}"
     value: "{{ item.value }}"
     scope: global
-  loop: "{{ git_config_globals }}"
+  loop: "{{ git_config_globals | dict2items }}"
 
 - name: set global git aliases
   git_config:
-    name: "alias.{{ item.alias }}"
-    value: "{{ item.command }}"
+    name: "alias.{{ item.key }}"
+    value: "{{ item.value }}"
     scope: global
-  loop: "{{ git_aliases }}"
+  loop: "{{ git_aliases | dict2items }}"

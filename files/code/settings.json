@@ -37,5 +37,24 @@
     "debug.console.fontSize": 12,
     "markdown.preview.fontSize": 12,
     "terminal.integrated.fontSize": 12,
-    "javascript.updateImportsOnFileMove.enabled": "always"
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "yaml.customTags": [
+        "!Ref",
+        "!GetAtt",
+        "!And",
+        "!If",
+        "!Not",
+        "!Equals",
+        "!Or",
+        "!FindInMap sequence",
+        "!Base64",
+        "!Cidr",
+        "!Sub sequence",
+        "!Sub scalar",
+        "!GetAZs",
+        "!ImportValue",
+        "!Select sequence",
+        "!Split",
+        "!Join sequence"
+    ]
 }
