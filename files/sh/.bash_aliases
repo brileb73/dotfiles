@@ -32,6 +32,9 @@ alias commit='git commit'
 alias shit='git push -u'
 alias emac='emacsclient -c'
 alias _='sudo'
+alias k='kubectl'
+alias kc='kubectx'
+alias kn='kubens'
 
 #======================================================================
 # NVM lazy load

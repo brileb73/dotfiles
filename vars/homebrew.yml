@@ -18,6 +18,8 @@ homebrew_packages:
 - grep
 - htop
 - jq
+- kubectl
+- kubectx
 - mysql
 - node@12
 - python3
