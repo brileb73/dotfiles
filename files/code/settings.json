@@ -56,5 +56,6 @@
         "!Select sequence",
         "!Split",
         "!Join sequence"
-    ]
+    ],
+    "go.formatTool": "goimports"
 }
