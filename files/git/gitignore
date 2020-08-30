@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# node
+npm-debug.log
+
+# IntelliJ
+.idea/
+
+# VS Code
+.vscode/
+
+# vi
+*~

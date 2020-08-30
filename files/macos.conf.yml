@@ -7,6 +7,7 @@
       relink: true
 
 - link:
+    ~/.config/git/ignore: git/gitignore
     ~/.ssh/config.d/main: ssh/main
     ~/.bash_aliases: sh/.bash_aliases
     ~/.bash_nag: sh/.bash_nag
