@@ -194,7 +194,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 727 1920 353 0 0 1920 1080 </string>
+	<string>10 14 1765 1070 0 0 1792 1120 </string>
 	<key>NeverWarnAboutShortLivedSessions_92367FE7-AFC1-482C-ADBA-9855F3314878</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_92367FE7-AFC1-482C-ADBA-9855F3314878_selection</key>
@@ -2865,11 +2865,13 @@
 	<key>NoSyncInstallationId</key>
 	<string>4742EDB3-66D0-456A-BCCA-F793C046326B</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>4</integer>
+	<integer>7</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
-	<real>618425650.58727705</real>
+	<real>618840628.08042395</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
 	<true/>
+	<key>NoSyncPermissionToShowTip</key>
+	<false/>
 	<key>NoSyncRecordedVariables</key>
 	<dict>
 		<key>0</key>
@@ -3648,11 +3650,11 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-08-10T11:07:32Z</date>
+	<date>2020-09-01T14:51:18Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<true/>
+	<false/>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>TabStyle</key>
@@ -3667,6 +3669,8 @@
 	<string>/-+\~_.</string>
 	<key>findIgnoreCase_iTerm</key>
 	<true/>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
