@@ -41,13 +41,20 @@
     "yaml.customTags": [
         "!Ref",
         "!GetAtt",
+        "!GetAtt sequence",
         "!And",
+        "!And sequence",
         "!If",
+        "!If sequence",
         "!Not",
         "!Equals",
+        "!Equals sequence",
         "!Or",
+        "!Or sequence",
+        "!Condition",
         "!FindInMap sequence",
         "!Base64",
+        "!Base64 mapping",
         "!Cidr",
         "!Sub sequence",
         "!Sub scalar",
@@ -55,6 +62,7 @@
         "!ImportValue",
         "!Select sequence",
         "!Split",
+        "!Split sequence",
         "!Join sequence"
     ],
     "go.formatTool": "goimports"

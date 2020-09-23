@@ -28,6 +28,7 @@ git_aliases:
   br: branch
   c: commit
   ci: commit
+  p: pull
   unstage: reset HEAD --
   get: clone
   root: rev-parse --show-toplevel

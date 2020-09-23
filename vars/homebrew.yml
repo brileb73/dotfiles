@@ -11,6 +11,7 @@ homebrew_packages:
 - awscli
 - docker
 - docker-compose
+- fluxctl
 - gcc
 - gettext
 - git
@@ -22,6 +23,7 @@ homebrew_packages:
 - kubectl
 - kubectx
 - kubeseal
+- kustomize
 - mysql
 - node@12
 - python3

@@ -130,6 +130,37 @@
 			<string></string>
 		</dict>
 	</dict>
+	<key>GlobalTouchBarMap</key>
+	<dict>
+		<key>touchbar:26B43D61-6309-4E91-B952-9DADE8C7E29F</key>
+		<dict>
+			<key>Action</key>
+			<integer>29</integer>
+			<key>Label</key>
+			<string>Split V</string>
+			<key>Text</key>
+			<string>92367FE7-AFC1-482C-ADBA-9855F3314878</string>
+		</dict>
+		<key>touchbar:5A43DDA3-DCF4-4356-8A71-95A6472A9B31</key>
+		<dict>
+			<key>Action</key>
+			<integer>25</integer>
+			<key>Label</key>
+			<string>Broadcast Input</string>
+			<key>Text</key>
+			<string>Broadcast Input to All Panes in Current Tab
+Broadcast Input.Broadcast Input to All Panes in Current Tab</string>
+		</dict>
+		<key>touchbar:EC208145-3A66-4772-99D2-EC2B98890DC6</key>
+		<dict>
+			<key>Action</key>
+			<integer>28</integer>
+			<key>Label</key>
+			<string>Split H</string>
+			<key>Text</key>
+			<string>92367FE7-AFC1-482C-ADBA-9855F3314878</string>
+		</dict>
+	</dict>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
 	<key>HideScrollbar</key>
@@ -152,6 +183,12 @@
 	<integer>524576</integer>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
+	<key>NSNavLastRootDirectory</key>
+	<string>~/Documents</string>
+	<key>NSNavLastUserSetHideExtensionButtonState</key>
+	<true/>
+	<key>NSNavPanelExpandedSizeForSaveMode</key>
+	<string>{841, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -172,7 +209,7 @@
 	dWxs0g0ODxJaTlMub2JqZWN0c1YkY2xhc3OiEBGAAoAKgA3TFA0OFRkdV05TLmtleXOj
 	FhcYgAOABIAFoxobHIAGgAeACIAJWklkZW50aWZpZXJVV2lkdGhWSGlkZGVuUTAjQGjA
 	AAAAAAAI0iUmJyhaJGNsYXNzbmFtZVgkY2xhc3Nlc1xOU0RpY3Rpb25hcnmiJylYTlNP
-	YmplY3TTFA0OKy8doxYXGIADgASABaMwMRyAC4AMgAiACVExI0BzsZ2yLQ5W0iUmNzhe
+	YmplY3TTFA0OKy8doxYXGIADgASABaMwMRyAC4AMgAiACVExI0B0oZ2yLQ5W0iUmNzhe
 	TlNNdXRhYmxlQXJyYXmjNzkpV05TQXJyYXkACAARABoAJAApADIANwBJAEwAUgBUAGMA
 	aQBuAHkAgACDAIUAhwCJAJAAmACcAJ4AoACiAKYAqACqAKwArgC5AL8AxgDIANEA0gDX
 	AOIA6wD4APsBBAELAQ8BEQETARUBGQEbAR0BHwEhASMBLAExAUABRAAAAAAAAAIBAAAA
@@ -193,8 +230,14 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSWindow Frame NSNavPanelAutosaveName</key>
+	<string>539 457 841 470 0 0 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>10 14 1765 1070 0 0 1792 1120 </string>
+	<string>0 751 1920 329 0 0 1920 1080 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>10 19 1900 1025 0 0 1920 1080 </string>
+	<key>NSWindow Frame iTerm Window 2</key>
+	<string>4738 -285 878 1066 3840 -303 1792 1120 </string>
 	<key>NeverWarnAboutShortLivedSessions_92367FE7-AFC1-482C-ADBA-9855F3314878</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_92367FE7-AFC1-482C-ADBA-9855F3314878_selection</key>
@@ -795,7 +838,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>RobotoMonoForPowerline-Regular 12</string>
+			<string>Menlo-Regular 11</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<false/>
 			<key>Option Key Sends</key>
@@ -2865,7 +2908,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>4742EDB3-66D0-456A-BCCA-F793C046326B</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>7</integer>
+	<integer>9</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>618840628.08042395</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
@@ -3361,7 +3404,7 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
-				<string>currentSession</string>
+				<string>currentSession.path</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -3418,6 +3461,14 @@
 				<true/>
 				<key>name</key>
 				<string>iterm2.localhostName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentSession.jobPid</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -3551,19 +3602,19 @@
 			</dict>
 			<dict>
 				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentSession</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
 				<false/>
 				<key>name</key>
 				<string>currentSession</string>
 				<key>nonterminalContext</key>
 				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>isTerminal</key>
-				<true/>
-				<key>name</key>
-				<string>currentSession.path</string>
-				<key>nonterminalContext</key>
-				<integer>0</integer>
 			</dict>
 		</array>
 		<key>4</key>
@@ -3594,6 +3645,8 @@
 			</dict>
 		</array>
 	</dict>
+	<key>NoSyncSaveDocumentAsPathSet_saveDocumentAs:</key>
+	<true/>
 	<key>NoSyncTipOfTheDayEligibilityBeganTime</key>
 	<real>618252850.58715105</real>
 	<key>PMPrintingExpandedStateForPrint2</key>
@@ -3650,7 +3703,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-09-01T14:51:18Z</date>
+	<date>2020-09-20T13:10:11Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
