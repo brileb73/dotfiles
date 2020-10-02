@@ -42,7 +42,7 @@ alias db-url='k get secret rails-secrets -o json | jq -r .data.DATABASE_URL | ba
 # NVM lazy load
 #======================================================================
 db-kube() {
-  SHORT_ENV=$(kubectl get configmaps -o json | jq -r '.items[] | select(.metadata.name | test("global-env")) | .data.K8S_CLUSTER_ALB_PREFIX' | sed 's/-/_/g')
+  SHORT_ENV=$(kubectl get configmaps -o json | jq -r '.items[0] | select(.metadata.name | test("global-env")) | .data.K8S_CLUSTER_ALB_PREFIX' | sed 's/-/_/g')
   DATABASE_URL=$(kubectl get secret rails-secrets -o json | jq -r .data.DATABASE_URL | base64 -D | sed 's|postgresql://||')
   echo $DATABASE_URL |
     awk -F'[:@/]' "{
