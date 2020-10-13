@@ -26,6 +26,7 @@ homebrew_packages:
 - kustomize
 - mysql
 - node@12
+- opa
 - python3
 - readline
 - ripgrep
