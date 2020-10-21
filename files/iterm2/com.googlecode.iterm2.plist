@@ -233,7 +233,7 @@ Broadcast Input.Broadcast Input to All Panes in Current Tab</string>
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>539 457 841 470 0 0 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 751 1920 329 0 0 1920 1080 </string>
+	<string>10 18 1767 1066 0 0 1792 1120 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>10 19 1900 1025 0 0 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -2908,7 +2908,7 @@ Broadcast Input.Broadcast Input to All Panes in Current Tab</string>
 	<key>NoSyncInstallationId</key>
 	<string>4742EDB3-66D0-456A-BCCA-F793C046326B</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>9</integer>
+	<integer>11</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>618840628.08042395</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
@@ -3703,11 +3703,11 @@ Broadcast Input.Broadcast Input to All Panes in Current Tab</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-09-20T13:10:11Z</date>
+	<date>2020-10-15T12:38:32Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>TabStyle</key>

@@ -5,10 +5,12 @@ homebrew_install_path: /usr/local/bin
 homebrew_taps:
 - homebrew/cask-fonts
 - weaveworks/tap
+- instrumenta/instrumenta
 
 homebrew_packages:
 - autoconf
 - awscli
+- conftest
 - docker
 - docker-compose
 - fluxctl
