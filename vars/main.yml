@@ -78,6 +78,7 @@ vscode_extensions:
 - kesmarag.base16-tomorrow-night
 - ms-azuretools.vscode-docker
 - ms-python.python
+- ms-vscode-remote.remote-containers
 - msjsdiag.debugger-for-chrome
 - rebornix.ruby
 - redhat.vscode-yaml
