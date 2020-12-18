@@ -26,6 +26,7 @@ homebrew_packages:
 - kubectx
 - kubeseal
 - kustomize
+- lastpass-cli
 - mysql
 - node@12
 - opa
@@ -33,6 +34,7 @@ homebrew_packages:
 - python3
 - readline
 - ripgrep
+- travis
 - weaveworks/tap/eksctl
 - wget
 - yq
@@ -51,6 +53,7 @@ homebrew_cask_apps:
 - iterm2
 - lens
 - macvim
+- postman
 - slack
 - spotify
 - tunnelblick

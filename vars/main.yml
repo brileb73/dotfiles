@@ -45,6 +45,7 @@ nvm_path: ~/.nvm
 pip_packages:
 # - awscli # v2 isn't getting published on pip because apparently that's too easy
 - boto3
+# - openshift # not python2 compatible
 - pep8
 - pylint
 - pytz

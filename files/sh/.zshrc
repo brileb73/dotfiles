@@ -28,6 +28,7 @@ SAVEHIST=10000
 
 setopt appendhistory extendedglob nomatch notify
 unsetopt autocd beep
+unsetopt correct_all
 bindkey -e
 
 export WORDCHARS="*?[]~=;!#$%^(){}<>"
@@ -78,6 +79,7 @@ source_exist $HOME/.bash_aliases
 source_exist $HOME/.bash_nag
 source_exist $HOME/.fzf.zsh
 source_exist /usr/share/nvm/init-nvm.sh
+source_exist $HOME/.travis/travis.sh
 # ================ common-files =======================================
 
 
