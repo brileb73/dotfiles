@@ -3,7 +3,7 @@ set $resize "resize"
 
 mode $resize {
     # Theses bindings trigger as soon as you enter the resize mode
-    
+
     # Pressing left will shrink the window's width.
     # Pressing right will grow the window's width.
     # Pressing up will shrink the window's height.

@@ -1,5 +1,5 @@
 # i3 config file
-# 
+#
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
@@ -12,10 +12,11 @@ font pango:Hack 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec TERMINAL=terminator i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start rofi (program launcher)
-bindsym $mod+d exec "rofi -show run"
+bindsym $mod+d exec "rofi -show drun"
+bindsym $mod+i exec "rofi -show run"

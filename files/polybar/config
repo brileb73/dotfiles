@@ -219,7 +219,8 @@ format-unmounted-padding = 1
 [module/date]
 type = internal/date
 date-alt =   %A, %d %B %Y %H:%M
-date = %{F#928374}%{F-} %H:%M
+#date = %{F#928374}%{F-} %H:%M
+date = %{F#928374} %{F-} %H:%M
 interval = 5
 ;format-underline = ${colors.white}
 ;format-background = ${colors.black}
