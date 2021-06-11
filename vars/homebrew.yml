@@ -13,12 +13,14 @@ homebrew_packages:
 - conftest
 - docker
 - docker-compose
+- fluxcd/tap/flux
 - fluxctl
 - gcc
 - gettext
 - git
 - go
 - grep
+- helm
 - htop
 - hugo
 - jq

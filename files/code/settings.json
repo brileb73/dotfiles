@@ -24,9 +24,11 @@
     ],
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
-    "window.zoomLevel": -1,
     "[python]": {
         "editor.tabSize": 4
+    },
+    "[go]": {
+        "editor.insertSpaces": false
     },
     "editor.multiCursorModifier": "alt",
     "gitlens.codeLens.enabled": false,
@@ -65,5 +67,17 @@
         "!Split sequence",
         "!Join sequence"
     ],
-    "go.formatTool": "goimports"
+    "go.formatTool": "goimports",
+    "workbench.editor.decorations.badges": true,
+    "workbench.editor.decorations.colors": true,
+    "workbench.colorTheme": "Base16 Tomorrow Night",
+    "go.lintTool": "golangci-lint",
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "window.zoomLevel": -1,
+    "redhat.telemetry.enabled": false
 }

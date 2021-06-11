@@ -32,9 +32,9 @@
     state: present
   loop: "{{ homebrew_packages }}"
 
-- name: install homebrew cask apps
-  homebrew_cask:
-    name: "{{ item }}"
-    state: present
-    install_options: "appdir={{ homebrew_cask_appdir }}"
-  loop: "{{ homebrew_cask_apps }}"
+#- name: install homebrew cask apps
+#  homebrew_cask:
+#    name: "{{ item }}"
+#    state: present
+#    install_options: "appdir={{ homebrew_cask_appdir }}"
+#  loop: "{{ homebrew_cask_apps }}"

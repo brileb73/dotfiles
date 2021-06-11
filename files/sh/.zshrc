@@ -27,8 +27,7 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 setopt appendhistory extendedglob nomatch notify
-unsetopt autocd beep
-unsetopt correct_all
+unsetopt autocd beep correct_all
 bindkey -e
 
 export WORDCHARS="*?[]~=;!#$%^(){}<>"
@@ -53,7 +52,7 @@ HYPHEN_INSENSITIVE="true"
 # DISABLE_AUTO_UPDATE="true"
 
 # Enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -86,5 +85,5 @@ source_exist $HOME/.travis/travis.sh
 # ================ exports ============================================
 export ARCHFLAGS="-arch x86_64"
 export SSH_KEY_PATH="~/.ssh/rsa_id"
-export PATH="$HOME/bin:$HOME/go/bin:$HOME/.yarn/bin:/usr/local/bin:$PATH:$HOME/.gem/ruby/bin:/usr/local/lib/ruby/gems/2.6.0/bin:/Applications/Postgres.app/Contents/Versions/9.6/bin"
+export PATH="$HOME/bin:$HOME/go/bin:$HOME/.yarn/bin:/usr/local/bin:$PATH:$HOME/.gem/ruby/bin:/usr/local/lib/ruby/gems/2.6.0/bin:/Applications/Postgres.app/Contents/Versions/13/bin"
 # ================ exports ============================================
