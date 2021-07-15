@@ -72,12 +72,9 @@
     "workbench.editor.decorations.colors": true,
     "workbench.colorTheme": "Base16 Tomorrow Night",
     "go.lintTool": "golangci-lint",
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
     "window.zoomLevel": -1,
     "redhat.telemetry.enabled": false
 }

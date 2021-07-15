@@ -36,9 +36,11 @@ git_aliases:
   lola: log --graph --oneline --all
   in: fetch --all
   out: push
+  outu: "!git push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
   outf: push --force-with-lease
   good: bisect good
   bad: bisect bad
+  oops: commit --amend --no-edit
 
 nvm_path: ~/.nvm
 
